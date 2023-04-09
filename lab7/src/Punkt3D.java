@@ -1,7 +1,7 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Punkt3D extends Punkt2D{
-    private int z;
+    public int z;
     @Override
     void losowanie(){
         super.losowanie();

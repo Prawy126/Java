@@ -1,7 +1,8 @@
 public class Wykladowca extends Osoba{
     private String przedmiot, nazwaUczelni;
     private int iloscGodzin, iloscWykladow;
-    Wykladowca(String imie, String nazwisko, String plec, int dzien, int numerMiesiaca, int rok, String przedmiot, String nazwaUczelni, int iloscGodzin, int iloscWykladow){
+    Wykladowca(String imie, String nazwisko, String plec, int dzien, int numerMiesiaca, int rok, String przedmiot, String nazwaUczelni,
+               int iloscGodzin, int iloscWykladow){
         super( imie, nazwisko, plec,dzien, numerMiesiaca, rok);
         this.iloscGodzin = iloscGodzin;
         this.przedmiot = przedmiot;

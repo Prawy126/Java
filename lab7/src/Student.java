@@ -2,7 +2,8 @@ public class Student extends Osoba{
     private int nrIndexu, rok;
     private String typStudiow, kierunek;
 
-    Student(String imie, String nazwisko, String plec, int dzien, int numerMiesiaca, int rokUrodzenia, int nrIndexu, int rok, String typStudiow, String kierunek){
+    Student(String imie, String nazwisko, String plec, int dzien, int numerMiesiaca, int rokUrodzenia, int nrIndexu, int rok, String typStudiow,
+            String kierunek){
         super(imie, nazwisko, plec, dzien, numerMiesiaca, rokUrodzenia);
         this.kierunek = kierunek;
         this.rok = rok;
