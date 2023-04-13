@@ -12,6 +12,7 @@ public class Symulacja {
         stos.push(32);
         stos.push(32);
         stos.push(32);
+        stos.push(32);
 
         stos.pop();
         stos.pop();
@@ -23,7 +24,8 @@ public class Symulacja {
         stos.pop();
         stos.pop();
         stos.pop();
-        
+        stos.pop();
+
 
 
 
