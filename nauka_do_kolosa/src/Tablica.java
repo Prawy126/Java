@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class Tablica {
     private int[] a;
-    Tablica(int a){
-        this.a = new int[a];
+    Tablica(int i){
+
+        this.a = new int[i];
     }
     private Scanner scanner = new Scanner(System.in);
     public void wprowadz(){
@@ -23,7 +24,7 @@ public class Tablica {
         for(int i = 0; i<a.length;i++){
             wynik = a[i] + wynik;
         }
-        return wynik/2;
+        return wynik/a.length;
     }
 
 }
