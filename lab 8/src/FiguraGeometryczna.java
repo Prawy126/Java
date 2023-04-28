@@ -1,4 +1,5 @@
 abstract public class FiguraGeometryczna {
-    void obliczPole(){}
+    abstract void obliczPole();
+
 
 }
