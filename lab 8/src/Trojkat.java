@@ -12,10 +12,7 @@ public class Trojkat extends FiguraPlaska{
     public void obliczObwod(){
         this.obwod = 3*a;
     }
-    public void wyswietlInformacje(){
-        System.out.println("TRÓJKĄT RÓWNOBOCZNY");
-        System.out.println("Podstawa: " + this.a + " Wysokość: " + this.h);
-        System.out.println("Pole: " + this.pole);
-        System.out.println("Obwód: " + this.obwod);
+    public String toString(){
+        return "TÓJKĄT RÓWNOBOCZNY\nPodstawa: " + this.a + "\nWysokość: " + this.h + "\nPole: " + this.pole + "\nObwód: " + this.obwod;
     }
 }

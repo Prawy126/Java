@@ -1,11 +1,16 @@
 public class Trapez extends FiguraPlaska{
     private float a, b, h,r1,r2, pole, obwod;
     public Trapez(float a, float b, float r1, float r2, float h){
-        this.a = a;
-        this.b = b;
-        this.r2 = r2;
-        this.r1 = r1;
-        this.h = h;
+        if(a>0)this.a = a;
+        else this.a = 0;
+        if(b>0)this.b = b;
+        else this.b = 0;
+        if(r2>0)this.r2 = r2;
+        else this.r2 = 0;
+        if(r1>0)this.r1 = r1;
+        else this.r1 = 0;
+        if(h>0)this.h = h;
+        else this.h = 0;
     }
     public void obliczObwod(){
         obwod = a+b+r1+r2;
@@ -13,11 +18,8 @@ public class Trapez extends FiguraPlaska{
     public void obliczPole(){
         pole = ((a+b)/2)*h;
     }
-    public void wyswietlInformacje(){
-        System.out.println("TRAPEZ");
-        System.out.println("Wymiary: Podstawy: \nA)"+a+"\nB)" + b + "ramina" + r1 + " i " + r2);
-        System.out.println("Pole: " + pole);
-        System.out.println("Obwód: " + obwod);
+    public String toString(){
+        return "TRAPEZ\nWymiary: \nPodstawy: \nA)"+a+"\nB)" + b + "\nramina" + r1 + " i " + r2 + "\nPole: " + pole + "\nObwód: " + obwod;
     }
 
 }

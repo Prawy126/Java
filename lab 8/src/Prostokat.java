@@ -12,10 +12,7 @@ public class Prostokat extends FiguraPlaska{
     public void obliczObwod(){
         obwod = 2*a+2*b;
     }
-    public void wyswietlInformacje(){
-        System.out.println("PROSTOKĄT");
-        System.out.println("Boki: " + this.a + ", " + this.b);
-        System.out.println("Obwod: " + this.obwod);
-        System.out.println("Pole: " + this.pole);
+    public String toString(){
+        return "PROSTOKĄT\nBoki: " + this.a + ", " + this.b + "\nObwod: " + this.obwod + "\nPole: " + this.pole;
     }
 }

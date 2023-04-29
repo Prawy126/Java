@@ -10,7 +10,7 @@ public class Kwadrat extends FiguraPlaska{
     public void obliczPole(){
         this.pole = Math.pow(this.a,2);
     }
-    public void wyswietlInformacje(){
-        System.out.println("KWADRAT\nPole: " + this.pole + "\nObwód: " + this.obwod + "\nBok: " + this.a);
+    public String toString(){
+        return "KWADRAT\nPole: " + this.pole + "\nObwód: " + this.obwod + "\nBok: " + this.a;
     }
 }
