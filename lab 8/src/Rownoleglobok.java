@@ -15,6 +15,6 @@ public class Rownoleglobok extends FiguraPlaska{
         pole = a * h;
     }
     public String toString(){
-        return "RÓWNOLEGŁOBOK\nBok: " + a + " i "+ b + "\nWysokość: " + h + "\nPole: " + pole + "\nObwód: " + obwod;
+        return super.toString() + "\nRÓWNOLEGŁOBOK\nBok: " + a + " i "+ b + "\nWysokość: " + h + "\nPole: " + pole + "\nObwód: " + obwod;
     }
 }

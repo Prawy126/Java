@@ -17,6 +17,6 @@ public class Romb extends FiguraPlaska{
         pole = (d*f)/2;
     }
     public String toString(){
-        return "ROMB\nBoki i przekątne: " + a + " " + b + " i " + f+ " " + d + "\nPole: " + pole + "\nObwód: " + obwod;
+        return super.toString() + "\nROMB\nBoki i przekątne: " + a + " " + b + " i " + f+ " " + d + "\nPole: " + pole + "\nObwód: " + obwod;
     }
 }

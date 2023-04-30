@@ -19,7 +19,7 @@ public class Trapez extends FiguraPlaska{
         pole = ((a+b)/2)*h;
     }
     public String toString(){
-        return "TRAPEZ\nWymiary: \nPodstawy: \nA)"+a+"\nB)" + b + "\nramina" + r1 + " i " + r2 + "\nPole: " + pole + "\nObwód: " + obwod;
+        return super.toString() + "\nTRAPEZ\nWymiary: \nPodstawy: \nA)"+a+"\nB)" + b + "\nramina" + r1 + " i " + r2 + "\nPole: " + pole + "\nObwód: " + obwod;
     }
 
 }

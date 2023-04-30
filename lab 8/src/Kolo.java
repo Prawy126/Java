@@ -11,6 +11,7 @@ public class Kolo extends FiguraPlaska{
         obwod = 2*Math.PI*r;
     }
     public String toString(){
-        return "KOŁO\nPromień: " + r + "\nObówd: " + obwod + "\nPole: " + pole;
+
+        return super.toString()+"\nKOŁO\nPromień: " + r + "\nObówd: " + obwod + "\nPole: " + pole;
     }
 }

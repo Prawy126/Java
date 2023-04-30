@@ -13,6 +13,6 @@ public class Prostokat extends FiguraPlaska{
         obwod = 2*a+2*b;
     }
     public String toString(){
-        return "PROSTOKĄT\nBoki: " + this.a + ", " + this.b + "\nObwod: " + this.obwod + "\nPole: " + this.pole;
+        return super.toString() + "\nPROSTOKĄT\nBoki: " + this.a + ", " + this.b + "\nObwod: " + this.obwod + "\nPole: " + this.pole;
     }
 }

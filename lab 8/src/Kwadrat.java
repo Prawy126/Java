@@ -11,6 +11,6 @@ public class Kwadrat extends FiguraPlaska{
         this.pole = Math.pow(this.a,2);
     }
     public String toString(){
-        return "KWADRAT\nPole: " + this.pole + "\nObwód: " + this.obwod + "\nBok: " + this.a;
+        return super.toString()+":\nKWADRAT\nPole: " + this.pole + "\nObwód: " + this.obwod + "\nBok: " + this.a;
     }
 }

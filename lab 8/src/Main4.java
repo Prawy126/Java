@@ -28,5 +28,25 @@ public class Main4 {
         kolo.obliczObwod();
         kolo.obliczPole();
         System.out.println(kolo.toString());
+        Szescian szescian = new Szescian(4);
+        szescian.obliczPole();
+        szescian.obliczObjetosc();
+        System.out.println(szescian.toString());
+        Prostopadloscian prostopadloscian = new Prostopadloscian(2,3,4);
+        prostopadloscian.obliczObjetosc();
+        prostopadloscian.obliczPole();
+        System.out.println(prostopadloscian.toString());
+        Kula kula = new Kula(4);
+        kula.obliczObjetosc();
+        kula.obliczPole();
+        System.out.println(kula.toString());
+        Stozek stozek = new Stozek(2,1,5);
+        stozek.obliczObjetosc();
+        stozek.obliczPole();
+        System.out.println(stozek.toString());
+        Walec walec = new Walec(2,5);
+        walec.obliczObjetosc();
+        walec.obliczPole();
+        System.out.println(walec.toString());
     }
 }

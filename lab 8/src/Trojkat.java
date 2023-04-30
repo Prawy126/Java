@@ -13,6 +13,6 @@ public class Trojkat extends FiguraPlaska{
         this.obwod = 3*a;
     }
     public String toString(){
-        return "TÓJKĄT RÓWNOBOCZNY\nPodstawa: " + this.a + "\nWysokość: " + this.h + "\nPole: " + this.pole + "\nObwód: " + this.obwod;
+        return super.toString() + "\nTÓJKĄT RÓWNOBOCZNY\nPodstawa: " + this.a + "\nWysokość: " + this.h + "\nPole: " + this.pole + "\nObwód: " + this.obwod;
     }
 }
