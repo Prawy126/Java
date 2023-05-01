@@ -1,5 +1,6 @@
 public class Main4 {
     public static void main(String[] args){
+        //zadanie 4
         Kwadrat kwadrat = new Kwadrat(4);
         kwadrat.obliczPole();
         kwadrat.obliczObwod();
@@ -48,5 +49,13 @@ public class Main4 {
         walec.obliczObjetosc();
         walec.obliczPole();
         System.out.println(walec.toString());
+        //zadanie 5
+        Object[] figura = {new Kolo(2),new Kolo(4), new Prostopadloscian(2,3,4),new Szescian(4),new Prostokat(4,2),new Romb(4,2,5,6),new Rownoleglobok(6,6,2),new Stozek(6,3,8),new Trapez(1,23,4,56,3),new Walec(5,2)};
+        int i = 0;
+        System.out.println("------------------------------\n-------------------------------");
+        while(i< figura.length){
+            System.out.println(figura[i].toString());
+            i++;
+        }
     }
 }
