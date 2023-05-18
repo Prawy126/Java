@@ -1,0 +1,3 @@
+to jest test
+sprawdzam czy 
+program działa

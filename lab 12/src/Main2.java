@@ -12,6 +12,7 @@ public class Main2 {
            nazwa = scanner2.nextLine();
            plik = new File("C:\\Users\\micha\\Desktop\\strona_internetowa\\nauka\\java_lab\\lab 12\\src\\"+nazwa);
            Scanner scanner = new Scanner(plik);
+
            boolean sprawdz = true;
            while(sprawdz){
                String tekst = scanner.nextLine();
