@@ -1,5 +1,5 @@
 import java.util.Random;
-//zadanie 2
+//zadanie 2S
 public class ObjectCounter {
     public static void main(String[] args){
         //tworzenie tablicy obiektów o 10 elemetnach

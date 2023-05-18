@@ -24,6 +24,7 @@ public class Main3 {
         list.add(dlugopis);
         list.add(traktor);
         for(Object i : list){
+            ((Zakupy)i).buy();
             ((Zakupy)i).showInfo();
             System.out.println("-----------------------------------------");
         }
