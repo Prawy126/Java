@@ -1,0 +1,6 @@
+//testuję czy działa
+class plik{
+    public static void main(String[] args){
+        
+    }
+}
