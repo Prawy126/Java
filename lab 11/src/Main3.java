@@ -3,7 +3,7 @@ public class Main3 {
     public static void main(String[] args) {
         // a)
         try {
-            double x = 2.0 / 0.0;
+            double x = 2.0/0.0;
             System.out.println(x);
         } catch (ArithmeticException e) {
             throw new DivisionByZeroException();
@@ -11,7 +11,7 @@ public class Main3 {
 
         // b)
         try {
-            float y = 2.0f / 0.0f;
+            float y = 2.0f/0.0f;
             System.out.println(y);
         } catch (ArithmeticException e) {
             throw new DivisionByZeroException();
@@ -19,7 +19,7 @@ public class Main3 {
 
         // c)
         try {
-            int z = 2 / 1;
+            int z = 2/1;
             System.out.println(z);
         } catch (ArithmeticException e) {
             throw new DivisionByZeroException();
