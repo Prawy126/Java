@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         WprowadzZKonsoli wprowadzZKonsoli = new WprowadzZKonsoli();
         int a = wprowadzZKonsoli.WprowadzInt();
-        //wprowadzZKonsoli.WprowadzBoolean();
-        //wprowadzZKonsoli.WprowadzFloat();
-        //wprowadzZKonsoli.WprowadzBigDecimal();
-        //wprowadzZKonsoli.WprowadzBigInteger();
+        wprowadzZKonsoli.WprowadzBoolean();
+        wprowadzZKonsoli.WprowadzFloat();
+        wprowadzZKonsoli.WprowadzBigDecimal();
+        wprowadzZKonsoli.WprowadzBigInteger();
     }
 }

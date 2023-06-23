@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lab1/DeklaracjaWlasna/DeklaracjaWlasna.iml" filepath="$PROJECT_DIR$/lab1/DeklaracjaWlasna/DeklaracjaWlasna.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab1/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/lab1/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab3/Lab3.iml" filepath="$PROJECT_DIR$/Lab3/Lab3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/NieskonczonaPetla/NieskonczonaPetla.iml" filepath="$PROJECT_DIR$/lab2/NieskonczonaPetla/NieskonczonaPetla.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab1/SystemProperties/SystemProperties.iml" filepath="$PROJECT_DIR$/lab1/SystemProperties/SystemProperties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/delta/delta.iml" filepath="$PROJECT_DIR$/lab2/delta/delta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java_lab.iml" filepath="$PROJECT_DIR$/.idea/java_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/kalkulator/kalkulator.iml" filepath="$PROJECT_DIR$/lab2/kalkulator/kalkulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kolos2/kolos2.iml" filepath="$PROJECT_DIR$/kolos2/kolos2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 10/lab 10.iml" filepath="$PROJECT_DIR$/lab 10/lab 10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 11/lab 11.iml" filepath="$PROJECT_DIR$/lab 11/lab 11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 12/lab 12.iml" filepath="$PROJECT_DIR$/lab 12/lab 12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 4/lab 4.iml" filepath="$PROJECT_DIR$/lab 4/lab 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 5/lab 5.iml" filepath="$PROJECT_DIR$/lab 5/lab 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 6/lab 6.iml" filepath="$PROJECT_DIR$/lab 6/lab 6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 8/lab 8.iml" filepath="$PROJECT_DIR$/lab 8/lab 8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab 9/lab 9.iml" filepath="$PROJECT_DIR$/lab 9/lab 9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab7/lab7.iml" filepath="$PROJECT_DIR$/lab7/lab7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/laby_zajecia/laby_zajecia.iml" filepath="$PROJECT_DIR$/lab2/laby_zajecia/laby_zajecia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nauka_do_kolosa/nauka_do_kolosa.iml" filepath="$PROJECT_DIR$/nauka_do_kolosa/nauka_do_kolosa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/obliczenia/obliczenia.iml" filepath="$PROJECT_DIR$/lab2/obliczenia/obliczenia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/sortowanie/sortowanie.iml" filepath="$PROJECT_DIR$/lab2/sortowanie/sortowanie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/tablica/tablica.iml" filepath="$PROJECT_DIR$/lab2/tablica/tablica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2/wypisywanie/wypisywanie.iml" filepath="$PROJECT_DIR$/lab2/wypisywanie/wypisywanie.iml" />
+    </modules>
+  </component>
+</project>
