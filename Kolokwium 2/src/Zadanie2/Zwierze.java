@@ -52,4 +52,6 @@ abstract public class Zwierze {
         System.out.println("Wiek: " + this.wiek);
         this.WyadjGlos();
     }
+
+    public abstract void pokazInformacje();
 }
