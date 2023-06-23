@@ -30,7 +30,26 @@ abstract public class Zwierze {
     public int getWiek() {
         return wiek;
     }
+    public Zwierze(String nazwa, String gatunek){
+        this.nazwa=nazwa;
+        this.gatunek=gatunek;
+    }
+    public Zwierze(String nazwa, String gatunek, int wiek){
+        this.nazwa = nazwa;
+        this.gatunek=gatunek;
+        if(wiek<0){
+            this.wiek=0;
+        }else {
+            this.wiek=wiek;
+        }
 
-
-
+    }
+    abstract public void WyadjGlos();
+    public void PokazInformacje(){
+        System.out.println("Dane zwierzęcia:");
+        System.out.println("Gatunek: " + this.gatunek);
+        System.out.println("Nazwa: " + this.nazwa);
+        System.out.println("Wiek: " + this.wiek);
+        this.WyadjGlos();
+    }
 }
