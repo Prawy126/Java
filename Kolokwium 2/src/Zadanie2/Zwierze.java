@@ -4,7 +4,7 @@ import Zadanie1.ValueNegativeException;
 
 abstract public class Zwierze {
     private String nazwa;
-    private int wiek;
+    private int wiek = 0;
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
@@ -34,11 +34,11 @@ abstract public class Zwierze {
         this.nazwa=nazwa;
         this.gatunek=gatunek;
     }
-    public Zwierze(String nazwa, String gatunek, int wiek){
+    public Zwierze(String nazwa, String gatunek, int wiek)throws ValueNegativeException{
         this.nazwa = nazwa;
         this.gatunek=gatunek;
         if(wiek<0){
-            this.wiek=0;
+            throw new ValueNegativeException(wiek);
         }else {
             this.wiek=wiek;
         }

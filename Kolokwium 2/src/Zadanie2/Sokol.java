@@ -1,9 +1,19 @@
 package Zadanie2;
 
+import Zadanie1.ValueNegativeException;
+
 public class Sokol extends Zwierze implements Ilatanie, IDrapieznictwo{
     private int predkoscLatania, wysokosc;
     @Override
-    public void Lataj(int predkoscLatania, int wysokosc) {
+    public void Lataj(int predkoscLatania, int wysokosc) throws ValueNegativeException{
+        if(wysokosc<0){
+            throw new ValueNegativeException(wysokosc);
+        }else if(predkoscLatania<0){
+            throw new ValueNegativeException(predkoscLatania);
+        }else {
+            this.wysokosc = wysokosc;
+            this.predkoscLatania = predkoscLatania;
+        }
         this.predkoscLatania = predkoscLatania;
         this.wysokosc = wysokosc;
     }
@@ -24,10 +34,17 @@ public class Sokol extends Zwierze implements Ilatanie, IDrapieznictwo{
 
 
     }
-    public Sokol(String nazwa, String gatunek, int wiek, int wysokosc, int predkoscLatania){
+    public Sokol(String nazwa, String gatunek, int wiek, int wysokosc, int predkoscLatania) throws ValueNegativeException {
         super(nazwa, gatunek , wiek);
-        this.wysokosc = wysokosc;
-        this.predkoscLatania = predkoscLatania;
+        if(wysokosc<0){
+            throw new ValueNegativeException(wysokosc);
+        }else if(predkoscLatania<0){
+            throw new ValueNegativeException(predkoscLatania);
+        }else {
+            this.wysokosc = wysokosc;
+            this.predkoscLatania = predkoscLatania;
+        }
+
     }
 
     @Override
