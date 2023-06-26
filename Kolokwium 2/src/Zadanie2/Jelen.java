@@ -35,4 +35,5 @@ public class Jelen extends Zwierze implements  IBiegaj{
         }
         this.predkosc = predkosc;
     };
+
 }
