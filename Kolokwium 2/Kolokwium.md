@@ -1,3 +1,4 @@
+### Kolokwium II
 # Zadanie 1.
 Utwórz klasę ValueNegativeException, która będzie wyrzucać wyjątki w przypadku gdy ustawiona lub wprowadzona liczba jest mniejsza od zera (a powinna być większa od zera). Przetestuj działanie klasy.
 (2 pkt).
@@ -25,7 +26,7 @@ Utwórz klasę ValueNegativeException, która będzie wyrzucać wyjątki w przyp
 Zaimplementuj metody abstrakcyjne oddziedziczone po interfejsach tak aby wartości w nich ustawiane (odpowiednio dodane pola klasy) mogły przyjmować tylko wartości dodatnie (chodzi o atrybuty: prędkość pływania i biegania, wysokość i głębokość)
 (10 pkt)
 
-**D)** __**(Uwaga zadanie wymagane – bez niego kolokwium będzie niezaliczone)**__
+**D)** _Uwaga zadanie wymagane – bez niego kolokwium będzie niezaliczone_
 Utwórz klasę Main posiadającą metodę main jako punkt startowy programu. Utwórz w metodzie main obiekty zwierząt  Jelen, Sokol, Tygrys, Pirania. Dla wszystkich obiektów wywołaj metodę PokazInformacje(). (2 pkt)
 
 **E)** W klasie Main utwórz metody statyczne umożliwiające wprowadzanie danych zwierząt. Wychwyć wyjątki typu ValueNegativeException i obsłuż je w taki sposób, że jeżeli użytkownik poda negatywną wartość wyświetla mu się informacja o błędnie podanej wartości i rekurencyjnie wywołuje się ta metoda wprowadzająca dane, aż do skutku (aż użytkownik poda właściwą wartość, większą od zera). (4pkt.)
