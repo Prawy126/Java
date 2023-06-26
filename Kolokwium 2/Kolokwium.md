@@ -1,9 +1,9 @@
-### Kolokwium II
-# Zadanie 1.
+# Kolokwium II
+## Zadanie 1.
 Utwórz klasę ValueNegativeException, która będzie wyrzucać wyjątki w przypadku gdy ustawiona lub wprowadzona liczba jest mniejsza od zera (a powinna być większa od zera). Przetestuj działanie klasy.
 (2 pkt).
 
-# Zadanie 2. 
+## Zadanie 2. 
 **A)**Utwórz klasę abstrakcyjną Zwierze. 
 - Klasa posiada odpowiednie pola: nazwa: String,  gatunek:String, wiek: int.
 - Dokonaj hermetyzacji pól pamiętając, że wiek nie może być ujemny. W razie wprowadzenia wartości ujemnej ma być wyrzucony wyjątek ValueNegativeException.
@@ -33,6 +33,6 @@ Utwórz klasę Main posiadającą metodę main jako punkt startowy programu. Utw
 
 **F)** W metodzie main utwórz dodatkowo 10-elementową tablicę przechowującą różne zwierzęta. Przejdź tablicę przy użyciu pętli i wywołaj dla każdego elementu tablicy metodę  PokazInformacje().  (2 pkt)
 
-# Zadanie 3.
+## Zadanie 3.
 Utwórz klasę generyczną o nazwie Tuple3, implementującą krotkę trzywartościową. Utwórz odpowiedni konstruktor ustawiający pola krotki oraz metody pobierające i ustawiające te pola. 
 (2 pkt)
