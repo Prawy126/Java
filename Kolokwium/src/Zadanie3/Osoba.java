@@ -1,8 +1,41 @@
 package Zadanie3;
 
 public class Osoba {
-    String imie, nazwisko, krajPochodzenia;
-    int wiek;
+    public void setImie(String imie) {
+        this.imie = imie;
+    }
+
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
+    }
+
+    public void setKrajPochodzenia(String krajPochodzenia) {
+        this.krajPochodzenia = krajPochodzenia;
+    }
+
+    public void setWiek(int wiek) {
+        this.wiek = wiek;
+    }
+
+    private String imie, nazwisko, krajPochodzenia;
+
+    public String getImie() {
+        return imie;
+    }
+
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
+    public String getKrajPochodzenia() {
+        return krajPochodzenia;
+    }
+
+    public int getWiek() {
+        return wiek;
+    }
+
+    private int wiek;
     public Osoba(){
         imie=null;
         nazwisko=null;
@@ -30,5 +63,15 @@ public class Osoba {
         }
         this.krajPochodzenia = krajPochodzenia;
     }
-    
+    public void WyswietlDaneOsoby(){
+        System.out.println("Imię: " + this.imie);
+        System.out.println("Nazwisko: " + this.nazwisko);
+        if(this.wiek!=0){
+            System.out.println("Wiek: " + this.wiek);
+        }
+        if(this.krajPochodzenia!=null){
+            System.out.println("Kraj pochodzenia: " + this.krajPochodzenia);
+        }
+    }
+
 }
