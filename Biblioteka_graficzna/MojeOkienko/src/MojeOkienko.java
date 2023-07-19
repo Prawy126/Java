@@ -32,7 +32,7 @@ JLabel lWyswieltDate;
     public void actionPerformed(ActionEvent e) {
         Object zrodlo = e.getSource();
         if(zrodlo == bPodajDate){
-            //System.out.println(new Date());
+            System.out.println(new Date());
 
             lWyswieltDate.setText(new Date().toString());
         }else if(zrodlo == bWyjscie){
