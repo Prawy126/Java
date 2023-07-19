@@ -6,6 +6,7 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
     private JLabel lCelsjusz, lFahrenheit;
     private JTextField tCelsjusz, tFahrenheit;
     private JButton bKonwertuj, bWyjscie;
+    private double tempCelsius, temFarenheit;
     public CelcjuszNaFarenheit(){
 
         setSize(400,200);
@@ -36,6 +37,7 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         bWyjscie.setBounds(210,80,80,40);
         add(bWyjscie);
         bWyjscie.addActionListener(this);
+        bKonwertuj.addActionListener(this);
 
     }
 
@@ -46,5 +48,8 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         if(zrodlo == bWyjscie){
             dispose();
         }
+        tempCelsius = Double.parseDouble(tCelsjusz.getText());
+        temFarenheit = 32.0+(9.0/5.0) *tempCelsius;
+        tFahrenheit.setText(String.valueOf(temFarenheit));
     }
 }
