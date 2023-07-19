@@ -8,6 +8,7 @@ public class Grafika extends JFrame implements ActionListener {
     private JButton b0, bZnak, bPrzecinek;
     JLabel wyswietlacz;
     private String liczba = "", wyniks;
+    private char znak;
     private double liczba1, liczba2, wynik = 0;
 
     Obliczenia licz = new Obliczenia();
@@ -103,61 +104,39 @@ public class Grafika extends JFrame implements ActionListener {
             liczba = liczba + ((JButton) zrodlo).getText();
             wyswietlacz.setText(liczba);
         }
-        if (zrodlo == bDodawanie) {
+        if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
-        } else if (zrodlo == bRownaSie) {
-            liczba2 = Double.parseDouble(liczba);
-            wynik = licz.dodawanie(liczba1, liczba2);
-
-            wyniks = Double.toString(wynik);
-
-            wyswietlacz.setText(wyniks);
-            liczba = "";
-        }
-
-        if (zrodlo == bOdejmowanie) {
+            znak = '+';
+        }else if(zrodlo == bOdejmowanie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
-        } else if (zrodlo == bRownaSie) {
-            liczba2 = Double.parseDouble(liczba);
-            wynik = licz.odejmowanie(liczba1,liczba2);
-
-            wyniks = Double.toString(wynik);
-
-            wyswietlacz.setText(wyniks);
-            liczba="";
-        }
-
-        if (zrodlo == bMnozenie) {
+            znak = '-';
+        }else if(zrodlo == bMnozenie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
-        } else if (zrodlo == bRownaSie) {
-            liczba2 = Double.parseDouble(liczba);
-            wynik = licz.mnozenie(liczba1, liczba2);
-
-            wyniks = Double.toString(wynik);
-
-            wyswietlacz.setText(wyniks);
-            liczba = "";
-        }
-
-        if (zrodlo == bDzielenie) {
+            znak = '*';
+        }else if(zrodlo == bDzielenie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
-
-        }else if (zrodlo == bRownaSie) {
+            znak = '/';
+        }else if(zrodlo == bRownaSie) {
             liczba2 = Double.parseDouble(liczba);
-            try{
-                wynik = licz.dzielenie(liczba1,liczba2);
-            }catch(ArithmeticException a){
-                liczba="Błąd nie można dzielić przez zero";
+            liczba = "";
+            if(znak == '+'){
+                wynik = licz.dodawanie(liczba1, liczba2);
+            }else if(znak == '-') {
+                wynik = licz.odejmowanie(liczba1, liczba2);
+            }else if(znak == '*'){
+                wynik = licz.mnozenie(liczba1,liczba2);
+
+            }else if(znak == '/'){
+               try{
+                   wynik = liczba.dzielenie(liczba1,liczba2);
+               }catch (Exception a){
+
+               }
             }
-
-            wyniks = Double.toString(wynik);
-
-            wyswietlacz.setText(wyniks);
-            liczba="";
         }
 
 
