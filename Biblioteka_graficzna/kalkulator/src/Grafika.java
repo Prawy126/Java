@@ -65,7 +65,7 @@ public class Grafika extends JFrame implements ActionListener {
         bPrzecinek = new JButton(",");
         bPrzecinek.setBounds(x+100,y+250,szerokosc,wysokosc);
         bPrzecinek.addActionListener(this);
-        //add(bPrzecinek);
+        add(bPrzecinek);
         b0 = new JButton("0");
         b0.setBounds(x+50,y+250,szerokosc,wysokosc);
         b0.addActionListener(this);
@@ -73,19 +73,19 @@ public class Grafika extends JFrame implements ActionListener {
         bZnak = new JButton("+/-");
         bZnak.setBounds(x,y+250,szerokosc,wysokosc);
         bZnak.addActionListener(this);
-        //add(bZnak);
+        add(bZnak);
         bOdejmowanie = new JButton("-");
         bOdejmowanie.setBounds(x+150,y+150,szerokosc,wysokosc);
         bOdejmowanie.addActionListener(this);
-       // add(bOdejmowanie);
+        add(bOdejmowanie);
         bMnozenie = new JButton("*");
         bMnozenie.setBounds(x+150,y+100,szerokosc,wysokosc);
         bMnozenie.addActionListener(this);
-        //add(bMnozenie);
+        add(bMnozenie);
         bDzielenie = new JButton("/");
         bDzielenie.setBounds(x+150,y+50,szerokosc,wysokosc);
         bDzielenie.addActionListener(this);
-       // add(bDzielenie);
+        add(bDzielenie);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("Domyślny tekst");
         wyswietlacz.setBounds(x,y,250,20);
@@ -125,18 +125,24 @@ public class Grafika extends JFrame implements ActionListener {
             liczba = "";
             if(znak == '+'){
                 wynik = licz.dodawanie(liczba1, liczba2);
+                wyniks = String.valueOf(wynik);
             }else if(znak == '-') {
                 wynik = licz.odejmowanie(liczba1, liczba2);
+                wyniks = String.valueOf(wynik);
             }else if(znak == '*'){
                 wynik = licz.mnozenie(liczba1,liczba2);
+                wyniks = String.valueOf(wynik);
 
             }else if(znak == '/'){
                try{
-                   wynik = liczba.dzielenie(liczba1,liczba2);
+                   wynik = licz.dzielenie(liczba1,liczba2);
                }catch (Exception a){
+                   wyniks = "nie można dzielić przez 0";
 
                }
+                wyniks = String.valueOf(wynik);
             }
+            wyswietlacz.setText(wyniks);
         }
 
 
