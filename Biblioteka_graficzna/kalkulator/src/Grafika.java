@@ -5,10 +5,11 @@ import java.awt.event.ActionListener;
 
 public class Grafika extends JFrame implements ActionListener {
     private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
-    private JButton b0, bZnak, bPrzecinek;
+    private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz;
     JLabel wyswietlacz;
     private String liczba = "", wyniks;
     private char znak;
+
     private double liczba1, liczba2, wynik = 0;
 
     Obliczenia licz = new Obliczenia();
@@ -86,6 +87,14 @@ public class Grafika extends JFrame implements ActionListener {
         bDzielenie.setBounds(x+150,y+50,szerokosc,wysokosc);
         bDzielenie.addActionListener(this);
         add(bDzielenie);
+        bCzyszczenie = new JButton("AC");
+        bCzyszczenie.setBounds(x+100,y+50,szerokosc,wysokosc);
+        bCzyszczenie.addActionListener(this);
+        add(bCzyszczenie);
+        bWylacz = new JButton("OFF");
+        bWylacz.setBounds(x,y+50,szerokosc*2,wysokosc);
+        bWylacz.addActionListener(this);
+        add(bWylacz);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
         wyswietlacz.setBounds(x,y,250,20);
@@ -149,6 +158,11 @@ public class Grafika extends JFrame implements ActionListener {
 
             }
 
+        } else if(zrodlo == bCzyszczenie){
+            liczba = "0";
+            wyswietlacz.setText(liczba);
+        }else if(zrodlo == bWylacz){
+            dispose();
         }
 
 
