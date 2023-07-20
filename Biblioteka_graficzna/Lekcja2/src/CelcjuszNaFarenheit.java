@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -6,6 +7,7 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
     private JLabel lCelsjusz, lFahrenheit;
     private JTextField tCelsjusz, tFahrenheit;
     private JButton bKonwertuj, bWyjscie;
+    private JCheckBox chWielkie;
     private double tempCelsius, temFarenheit;
     public CelcjuszNaFarenheit(){
 
@@ -19,6 +21,7 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
 
         tCelsjusz = new JTextField("");
         tCelsjusz.setBounds(170,20,150,20);
+        tCelsjusz.addActionListener(this);
         add(tCelsjusz);
 
         lFahrenheit = new JLabel("Stopnie Fahrenheit: ");
@@ -27,6 +30,7 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
 
         tFahrenheit = new JTextField("");
         tFahrenheit.setBounds(170,50,150,20);
+
         add(tFahrenheit);
 
         bKonwertuj = new JButton("Przelicz");
@@ -39,17 +43,29 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         bWyjscie.addActionListener(this);
         bKonwertuj.addActionListener(this);
 
+        chWielkie = new JCheckBox("Wielkie litery");
+        chWielkie.setBounds(250,120,150,20);
+        add(chWielkie);
+        chWielkie.addActionListener(this);
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object zrodlo = e.getSource();
-        if(zrodlo == bWyjscie){
+        if (zrodlo == bWyjscie) {
             dispose();
+        } else if (zrodlo == bKonwertuj || zrodlo == tCelsjusz) {
+            tempCelsius = Double.parseDouble(tCelsjusz.getText());
+            temFarenheit = 32.0 + (9.0 / 5.0) * tempCelsius;
+            tFahrenheit.setText(String.valueOf(temFarenheit));
+
+        }else if(zrodlo == chWielkie){
+            if(true == chWielkie.isSelected()){
+                tFahrenheit.setFont(new Font("SansSerif",Font.BOLD,18));
+            }else {
+                tFahrenheit.setFont(new Font("SansSerif",Font.BOLD,12));
+            }
         }
-        tempCelsius = Double.parseDouble(tCelsjusz.getText());
-        temFarenheit = 32.0+(9.0/5.0) *tempCelsius;
-        tFahrenheit.setText(String.valueOf(temFarenheit));
     }
 }
