@@ -4,10 +4,20 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Grafika extends JFrame implements ActionListener {
+    //zmienne do przycisków
     private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
     private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz;
+
+    //zmienna do wyświetlacza
     JLabel wyswietlacz;
+
+    //zmienna do zmiany znaku
+    private boolean zmianaZnaku = false;
+
+    //zmienna wyświetlająca liczby w onknie
     private String liczba = "", wyniks;
+
+    //zmienna do określenia które działanie trzeba wykonać
     private char znak;
 
     private double liczba1, liczba2, wynik = 0;
@@ -108,11 +118,13 @@ public class Grafika extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object zrodlo = e.getSource();
+        //odczytywanie przycisków i zamienianie ich na tekst
         if (zrodlo == b0 || zrodlo == b1 || zrodlo == b2 || zrodlo == b3 || zrodlo == b4 ||
                 zrodlo == b5 || zrodlo == b6 || zrodlo == b7 || zrodlo == b8 || zrodlo == b9 || zrodlo == bPrzecinek) {
             liczba = liczba + ((JButton) zrodlo).getText();
             wyswietlacz.setText(liczba);
         }
+        //zapisanie tekstu jako liczbę i wybranie działania
         if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
@@ -129,6 +141,7 @@ public class Grafika extends JFrame implements ActionListener {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
             znak = '/';
+        //wykonywanie odpowiednich równań
         }else if(zrodlo == bRownaSie) {
             liczba2 = Double.parseDouble(liczba);
             liczba = "";
@@ -155,16 +168,29 @@ public class Grafika extends JFrame implements ActionListener {
                    wyniks = String.valueOf(wynik);
                    wyswietlacz.setText(wyniks);
                }
-
+                zmianaZnaku = false;
             }
-
+            //implementacja przycisko czyszczącego
         } else if(zrodlo == bCzyszczenie){
-            liczba = "0";
+            liczba = "";
             wyswietlacz.setText(liczba);
-        }else if(zrodlo == bWylacz){
+            //implementacja przycisku wyłączenia(nie jest to x w górnym prawym rogu)
+        }else if(zrodlo == bWylacz) {
             dispose();
+            //implementacja przycsku do zmiany znaku liczby(trzeba go poprawić gdyż nie zawsze działa poprawnie)
+        }else if(zrodlo == bZnak){
+            if(zmianaZnaku == false){
+                liczba= "-"+liczba;
+                zmianaZnaku = true;
+                wyswietlacz.setText(liczba);
+            }else if(zmianaZnaku == true){
+                liczba1 = Double.parseDouble(liczba);
+                liczba1 = Math.abs(liczba1);
+                liczba = String.valueOf(liczba1);
+                zmianaZnaku = false;
+                wyswietlacz.setText(liczba);
+            }
         }
-
 
     }
 }
