@@ -87,7 +87,7 @@ public class Grafika extends JFrame implements ActionListener {
         bDzielenie.addActionListener(this);
         add(bDzielenie);
         //dodanie wyświetlacza
-        wyswietlacz = new JLabel("Domyślny tekst");
+        wyswietlacz = new JLabel("0");
         wyswietlacz.setBounds(x,y,250,20);
         wyswietlacz.setForeground(Color.BLUE);
         wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,20));
