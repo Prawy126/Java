@@ -13,7 +13,7 @@ public class Grafika extends JFrame implements ActionListener {
 
     Obliczenia licz = new Obliczenia();
 
-    private int x = 5, y = 5, wysokosc = 50, szerokosc = 50;
+    private int x = 10, y = 5, wysokosc = 50, szerokosc = 50;
     public Grafika(){
         setTitle("Kalkulator");
         setLayout(null);
@@ -62,7 +62,7 @@ public class Grafika extends JFrame implements ActionListener {
         bDodawanie.setBounds(x+150,y+200,szerokosc,wysokosc);
         bDodawanie.addActionListener(this);
         add(bDodawanie);
-        bPrzecinek = new JButton(",");
+        bPrzecinek = new JButton(".");
         bPrzecinek.setBounds(x+100,y+250,szerokosc,wysokosc);
         bPrzecinek.addActionListener(this);
         add(bPrzecinek);
@@ -90,10 +90,10 @@ public class Grafika extends JFrame implements ActionListener {
         wyswietlacz = new JLabel("0");
         wyswietlacz.setBounds(x,y,250,20);
         wyswietlacz.setForeground(Color.BLUE);
-        wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,20));
+        wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,16));
         add(wyswietlacz);
 
-        setSize(225,350);
+        setSize(240,350);
     }
 
     @Override
@@ -126,23 +126,29 @@ public class Grafika extends JFrame implements ActionListener {
             if(znak == '+'){
                 wynik = licz.dodawanie(liczba1, liczba2);
                 wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
             }else if(znak == '-') {
                 wynik = licz.odejmowanie(liczba1, liczba2);
                 wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
             }else if(znak == '*'){
                 wynik = licz.mnozenie(liczba1,liczba2);
                 wyniks = String.valueOf(wynik);
-
+                wyswietlacz.setText(wyniks);
             }else if(znak == '/'){
                try{
                    wynik = licz.dzielenie(liczba1,liczba2);
                }catch (Exception a){
                    wyniks = "nie można dzielić przez 0";
-
+                   wyswietlacz.setText(wyniks);
                }
-                wyniks = String.valueOf(wynik);
+               if(liczba2!=0){
+                   wyniks = String.valueOf(wynik);
+                   wyswietlacz.setText(wyniks);
+               }
+
             }
-            wyswietlacz.setText(wyniks);
+
         }
 
 
