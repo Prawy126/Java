@@ -93,10 +93,19 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         Object zrodlo = e.getSource();
         if (zrodlo == bWyjscie) {
             dispose();
-        } else if (zrodlo == bKonwertuj || zrodlo == tCelsjusz) {
-            tempCelsius = Double.parseDouble(tCelsjusz.getText());
-            temFarenheit = 32.0 + (9.0 / 5.0) * tempCelsius;
-            tFahrenheit.setText(String.valueOf(temFarenheit));
+        } else if (zrodlo == bKonwertuj) {
+
+            if(rbCtoF.isSelected()){
+                tempCelsius = Double.parseDouble(tCelsjusz.getText());
+                temFarenheit = 32.0 + (9.0 / 5.0) * tempCelsius;
+                tFahrenheit.setText(String.valueOf(temFarenheit));
+            }else if(rbCtoF.isSelected()){
+                temFarenheit = Double.parseDouble(tFahrenheit.getText());
+                tempCelsius=(temFarenheit-32)*(5.0/9.0);
+                tCelsjusz.setText(String.valueOf(tempCelsius));
+            }
+
+
 
         } else if (zrodlo == chWielkie) {
             if (true == chWielkie.isSelected()) {
@@ -111,5 +120,16 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         }else if(zrodlo == rbDuzy){
             tFahrenheit.setFont(new Font("SansSerif",Font.PLAIN,20));
         }*/
+        if(zrodlo == tCelsjusz){
+            tempCelsius = Double.parseDouble(tCelsjusz.getText());
+            temFarenheit = 32.0 + (9.0 / 5.0) * tempCelsius;
+            tFahrenheit.setText(String.valueOf(temFarenheit));
+
+        }else if(zrodlo == tFahrenheit){
+            temFarenheit = Double.parseDouble(tFahrenheit.getText());
+            tempCelsius=(temFarenheit-32)*(5.0/9.0);
+            tCelsjusz.setText(String.valueOf(tempCelsius));
+
+        }
     }
 }
