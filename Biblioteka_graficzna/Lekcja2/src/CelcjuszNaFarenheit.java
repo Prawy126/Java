@@ -8,8 +8,9 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
     private JTextField tCelsjusz, tFahrenheit;
     private JButton bKonwertuj, bWyjscie;
     private JCheckBox chWielkie;
-    private ButtonGroup bgRozmiar;
-    private JRadioButton rbMaly, rbSredni, rbDuzy;
+    private JRadioButton rbCtoF, rbFtoC;
+    private ButtonGroup bgRozmiar, radioPanel;
+    //private JRadioButton rbMaly, rbSredni, rbDuzy;
     private double tempCelsius, temFarenheit;
 
     public CelcjuszNaFarenheit() {
@@ -56,7 +57,7 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         chWielkie.addActionListener(this);
         bgRozmiar = new ButtonGroup();
 
-        rbMaly = new JRadioButton("Mały", true);
+        /*rbMaly = new JRadioButton("Mały", true);
         rbMaly.setBounds(50,150,100,20);
         bgRozmiar.add(rbMaly);
         add(rbMaly);
@@ -72,8 +73,18 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
         rbDuzy.setBounds(250,150,100,20);
         bgRozmiar.add(rbDuzy);
         add(rbDuzy);
-        rbDuzy.addActionListener(this);
+        rbDuzy.addActionListener(this);*/
 
+        radioPanel = new ButtonGroup();
+        rbFtoC = new JRadioButton("Fahrenheit na Celsiusz");
+        rbFtoC.setBounds(50,150,150,20);
+        radioPanel.add(rbFtoC);
+        add(rbFtoC);
+        rbCtoF = new JRadioButton("Ceslsiusz na Fahrenheit");
+        rbCtoF.setBounds(200,150,150,20);
+        rbCtoF.setSelected(true);
+        radioPanel.add(rbCtoF);
+        add(rbCtoF);
     }
 
 
@@ -93,12 +104,12 @@ public class CelcjuszNaFarenheit extends JFrame implements ActionListener {
             } else {
                 tFahrenheit.setFont(new Font("SansSerif", Font.BOLD, 12));
             }
-        }else if(zrodlo == rbMaly){
+        }/*else if(zrodlo == rbMaly){
             tFahrenheit.setFont(new Font("SansSerif",Font.PLAIN,12));
         }else if(zrodlo == rbSredni){
             tFahrenheit.setFont(new Font("SansSerif",Font.PLAIN,16));
         }else if(zrodlo == rbDuzy){
             tFahrenheit.setFont(new Font("SansSerif",Font.PLAIN,20));
-        }
+        }*/
     }
 }
