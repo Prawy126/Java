@@ -1,6 +1,6 @@
 # Programowanie obiektowe w języku Java
-To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z topowych języków programownia
-## Oto liniki do poszczególnych labów oraz tematów:
+To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z topowych języków programowania
+## Oto linki do poszczególnych labów oraz tematów:
 #### Zadania z laboratorium:
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1">Laboratorium numer 1</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab2">Laboratorium numer 2</a><br>
@@ -20,7 +20,7 @@ To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z to
 <a href="https://github.com/Prawy126/Java/tree/main/LKolokiwum/Kolokwium2">Drugie kolokwium</a><br>
 
 ## Nauka biblioteki graficznej
-Aktuanie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie zmieni w niedługim okresie czasu, pojawiać będą się tu materiały z których uczę się jak korzystać z metod i obiektów bibliotki oraz różnego rodzaju projekty)<br>
+Aktualnie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie zmieni w niedługim okresie czasu, pojawiać będą się tu materiały z których uczę się jak korzystać z metod i obiektów biblioteki oraz różnego rodzaju projekty)<br>
 #### Materiały z lekcji:
 <a href="https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/MojeOkienko">Pierwsza lekcja</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/Lekcja2">Druga lekcja</a><br>
