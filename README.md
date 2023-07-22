@@ -28,3 +28,5 @@ Aktualnie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie
 #### Projekty:
 <a href="https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/kalkulator">Prosty kalkulator graficzny</a><br>
 
+### Oto licencja tego repozytorium:
+<a href="https://github.com/Prawy126/Java/tree/main/LICENSE">Licencja MIT</a><br>
