@@ -12,7 +12,7 @@ public class Grafika extends JFrame implements ActionListener {
     JLabel wyswietlacz;
 
     //zmienna do zmiany znaku
-    private boolean zmianaZnaku = false;
+    private boolean zmianaZnaku = false, przecinek;
 
     //zmienna wyświetlająca liczby w onknie
     private String liczba = "", wyniks;
@@ -24,7 +24,7 @@ public class Grafika extends JFrame implements ActionListener {
 
     Obliczenia licz = new Obliczenia();
 
-    private int x = 10, y = 5, wysokosc = 50, szerokosc = 50;
+    private int x = 11, y = 5, wysokosc = 50, szerokosc = 50;
     public Grafika(){
         setTitle("Kalkulator");
         setLayout(null);
@@ -120,31 +120,47 @@ public class Grafika extends JFrame implements ActionListener {
         Object zrodlo = e.getSource();
         //odczytywanie przycisków i zamienianie ich na tekst
         if (zrodlo == b0 || zrodlo == b1 || zrodlo == b2 || zrodlo == b3 || zrodlo == b4 ||
-                zrodlo == b5 || zrodlo == b6 || zrodlo == b7 || zrodlo == b8 || zrodlo == b9 || zrodlo == bPrzecinek) {
+                zrodlo == b5 || zrodlo == b6 || zrodlo == b7 || zrodlo == b8 || zrodlo == b9) {
             liczba = liczba + ((JButton) zrodlo).getText();
             wyswietlacz.setText(liczba);
         }
         //zapisanie tekstu jako liczbę i wybranie działania
+        else if(zrodlo == bPrzecinek){
+            if(przecinek == false){
+                liczba = liczba + ".";
+                przecinek = true;
+            }
+        }
         if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
             znak = '+';
         }else if(zrodlo == bOdejmowanie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
             znak = '-';
         }else if(zrodlo == bMnozenie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
             znak = '*';
         }else if(zrodlo == bDzielenie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
             znak = '/';
         //wykonywanie odpowiednich równań
         }else if(zrodlo == bRownaSie) {
             liczba2 = Double.parseDouble(liczba);
             liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
             if(znak == '+'){
                 wynik = licz.dodawanie(liczba1, liczba2);
                 wyniks = String.valueOf(wynik);
@@ -173,6 +189,7 @@ public class Grafika extends JFrame implements ActionListener {
             //implementacja przycisko czyszczącego
         } else if(zrodlo == bCzyszczenie){
             liczba = "";
+            przecinek = false;
             wyswietlacz.setText(liczba);
             //implementacja przycisku wyłączenia(nie jest to x w górnym prawym rogu)
         }else if(zrodlo == bWylacz) {
