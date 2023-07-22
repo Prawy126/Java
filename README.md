@@ -1,6 +1,7 @@
 # Programowanie obiektowe w języku Java
 To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z topowych języków programownia
 ## Oto liniki do poszczególnych labów oraz tematów:
+#### Zadania z laboratorium:
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1">Laboratorium numer 1</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab2">Laboratorium numer 2</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab3">Laboratorium numer 3</a><br>
