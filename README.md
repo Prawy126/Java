@@ -17,7 +17,7 @@ To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z to
 
 ## Kolokwium z labów:
 <a href="https://github.com/Prawy126/Java/tree/main/Kolokwium/Kolokwium">Pierwsze kolokwium</a><br>
-<a href="https://github.com/Prawy126/Java/tree/main/LKolokiwum/Kolokwium%202">Drugie kolokwium</a><br>
+<a href="https://github.com/Prawy126/Java/tree/main/Kolokiwum/Kolokwium%202">Drugie kolokwium</a><br>
 
 ## Nauka biblioteki graficznej
 Aktualnie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie zmieni w niedługim okresie czasu, pojawiać będą się tu materiały z których uczę się jak korzystać z metod i obiektów biblioteki oraz różnego rodzaju projekty)<br>
