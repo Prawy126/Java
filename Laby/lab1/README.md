@@ -18,7 +18,7 @@ z krótkim omówieniem.
 <img src="https://github.com/Prawy126/Java/blob/main/Laby/lab1/zadanie2.png">
 
 ##### Rowiązanie zadania:
-<a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1/SystemProperties">Zadanie 3</a><br>
+<a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1/SystemProperties">Zadanie 2</a><br>
 
 # Zadanie 3
 Utwórz projekt o nazwie DeklaracjaWlasna. W metodzie "main" umieść poniższy kod.
