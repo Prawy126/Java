@@ -7,15 +7,21 @@ Jeśli kod został wprowadzony poprawnie to kompilator uruchomi go i konsola wy�
 Jeśli jednak w kodzie są błędy to konsola wyświetli informacje o błędach i wskaże linię w kodzie która prawdopodobine jest odpowiedzialna za błąd.
 <img src="https://github.com/Prawy126/Java/blob/main/Laby/lab1/Poprawa.png"><br>
 - Proszę wyświetlić wyniki poprawnie zredagowanego programu i umieścić je w sprawozdaniu wraz z krótkim omówieniem.
+##### Rowiązanie zadania:
+<a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1/HelloWorld">Zadanie 1</a><br>
 
 # Zadanie 2
 Utwórz nowy projekt o nazwie,,SystemProperties". W metodzie,,main" umieść poniższy kod. 
 Uruchom program i wyświetl wyniki. Wyświetlone na konsoli wyniki umieść w sprawozdaniu wraz 
 z krótkim omówieniem.
 <img src="https://github.com/Prawy126/Java/blob/main/Laby/lab1/zadanie2.png">
+##### Rowiązanie zadania:
+<a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1/SystemProperties">Zadanie 3</a><br>
 
 # Zadanie 3
 Utwórz projekt o nazwie DeklaracjaWlasna. W metodzie "main" umieść poniższy kod.
 Uruchom porgram i wyświetl wyniki. Wyświetlone na konsoli wyniki umieść w sprawozdaniu
 wraz z własnym odniesieniem się do terści deklaracji własnej.
 <img src="https://github.com/Prawy126/Java/blob/main/Laby/lab1/Deklaracja%20.png">
+##### Rowiązanie zadania:
+<a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1/DeklaracjaWlasna">Zadanie 3</a><br>
