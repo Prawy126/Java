@@ -1,8 +1,8 @@
 # Spis treści
--  początek
--  typy danych
--  operatory arytmrtyczne
--  operatory porównań
+1) początek
+2) typy danych
+3) operatory arytmrtyczne
+4) operatory porównań
 5)  instrukcja warunkowa
 6)  switch
 7)  pętle
