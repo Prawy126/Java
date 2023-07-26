@@ -31,5 +31,8 @@ Aktualnie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie
 #### Zadania domowe na wykład Algorytmy i struktury danych wykonane w języku Java:
 <a href="https://github.com/Prawy126/Java/tree/main/Algorytmy">Algorytmy i struktury danych</a><br>
 
+#### Kursy które już przerobiłem:
+<a href="https://github.com/Prawy126/Java/tree/main/Kurs_Kanal_O_Wszystkim">Kurs języka Java z kanału kanał o wszystkim</a><br>
+
 ### Oto licencja tego repozytorium:
 <a href="https://github.com/Prawy126/Java/tree/main/LICENSE">Licencja MIT</a><br>
