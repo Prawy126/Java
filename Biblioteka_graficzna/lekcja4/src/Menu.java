@@ -37,7 +37,7 @@ public class Menu extends JFrame implements ActionListener {
             menuOpcje = new JMenu("Opcje");
             menuOpcja1 = new JMenuItem("Opcja1");
             chOpcja2 = new JCheckBoxMenuItem("Opcja2");
-
+            chOpcja2.addActionListener(this);
             menuOpcje.add(menuOpcja1);
             menuOpcje.add(chOpcja2);
         menuNarzedzia.add(menuOpcje);
@@ -46,6 +46,7 @@ public class Menu extends JFrame implements ActionListener {
         menuPomoc = new JMenu("Pomoc");
         mOProgramy = new JMenuItem("O Programie");
         menuPomoc.add(mOProgramy);
+        mOProgramy.addActionListener(this);
 
         setJMenuBar(menuBar);
         menuBar.add(menuPlik);
@@ -58,8 +59,16 @@ public class Menu extends JFrame implements ActionListener {
         Object zrodlo = e.getSource();
         if(zrodlo == mWyjscie){
             dispose();
-        }else{
-
+        }
+        if(zrodlo == chOpcja2){
+            if(chOpcja2.isSelected()){
+                mNarz1.setEnabled(true);
+            }else if(!chOpcja2.isSelected()){
+                mNarz1.setEnabled(false);
+            }
+        }
+        if(zrodlo == mOProgramy){
+            JOptionPane.showMessageDialog(this,"Program demonstruje wykorzystanie JMenuBar i JMenu\n Wersja 1.0");
         }
     }
 }
