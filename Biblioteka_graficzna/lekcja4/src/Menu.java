@@ -6,6 +6,7 @@ public class Menu extends JFrame implements ActionListener {
     private JMenuBar menuBar;
     private JMenu menuPlik, menuNarzedzia, menuPomoc, menuOpcje;
     private JMenuItem mOtworz, mZapisz, mWyjscie, mNarz1, mNarz2, mOProgramy, menuOpcja1, menuOpcja2;
+    private JCheckBoxMenuItem chOpcja2;
     public Menu(){
         setTitle("Menu");
         setSize(800,800);
@@ -15,7 +16,7 @@ public class Menu extends JFrame implements ActionListener {
         menuBar = new JMenuBar();
         menuPlik = new JMenu("Plik");
 
-        mOtworz = new JMenuItem("Otwórz");
+        mOtworz = new JMenuItem("Otwórz", 'O');
         mZapisz = new JMenuItem("Zapisz");
         mWyjscie = new JMenuItem("Wyjście");
         menuPlik.add(mOtworz);
@@ -23,18 +24,22 @@ public class Menu extends JFrame implements ActionListener {
         menuPlik.addSeparator();
         menuPlik.add(mWyjscie);
 
+        mWyjscie.addActionListener(this);
+        mWyjscie.setAccelerator(KeyStroke.getKeyStroke("ctrl X"));
+
         menuNarzedzia = new JMenu("Narzędzia");
         mNarz1 = new JMenuItem("Narzędzia1");
         mNarz2 = new JMenuItem("Narzędzia2");
         menuNarzedzia.add(mNarz1);
+        mNarz1.setEnabled(false);
         menuNarzedzia.add(mNarz2);
 
             menuOpcje = new JMenu("Opcje");
             menuOpcja1 = new JMenuItem("Opcja1");
-            menuOpcja2 = new JMenuItem("Opcja2");
+            chOpcja2 = new JCheckBoxMenuItem("Opcja2");
 
             menuOpcje.add(menuOpcja1);
-            menuOpcje.add(menuOpcja2);
+            menuOpcje.add(chOpcja2);
         menuNarzedzia.add(menuOpcje);
 
 
@@ -50,6 +55,11 @@ public class Menu extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        Object zrodlo = e.getSource();
+        if(zrodlo == mWyjscie){
+            dispose();
+        }else{
 
+        }
     }
 }
