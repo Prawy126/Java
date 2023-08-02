@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class Grafika extends JFrame implements ActionListener {
     //zmienne do przycisków
     private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
-    private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek;
+    private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek, bPamiec, bcPamiec;
 
     //zmienna do wyświetlacza
     JLabel wyswietlacz;
@@ -15,7 +15,7 @@ public class Grafika extends JFrame implements ActionListener {
     private boolean zmianaZnaku = false, przecinek;
 
     //zmienna wyświetlająca liczby w onknie
-    private String liczba = "", wyniks;
+    private String liczba = "", wyniks, pamiec = "0";
 
     //zmienna do określenia które działanie trzeba wykonać
     private char znak;
@@ -24,7 +24,7 @@ public class Grafika extends JFrame implements ActionListener {
 
     Obliczenia licz = new Obliczenia();
 
-    private int x = 11, y = 5, wysokosc = 50, szerokosc = 50;
+    private int x = 11, y = 55, wysokosc = 50, szerokosc = 50;
     public Grafika(){
         setTitle("Kalkulator");
         setLayout(null);
@@ -106,17 +106,27 @@ public class Grafika extends JFrame implements ActionListener {
         bWylacz.addActionListener(this);
         add(bWylacz);
         bPierwiastek = new JButton("√");
-        bPierwiastek.setBounds(x+100,y,szerokosc,wysokosc);
+        bPierwiastek.setBounds(x+150,y,szerokosc,wysokosc);
         bPierwiastek.addActionListener(this);
         add(bPierwiastek);
+        bPamiec = new JButton("M+");
+        bPamiec.setBounds(x+100,y,szerokosc,wysokosc);
+        bPamiec.addActionListener(this);
+        bPamiec.setFont(new Font("SansSerif",Font.BOLD,10));
+        add(bPamiec);
+        bcPamiec = new JButton("MC");
+        bcPamiec.setBounds(x+50,y,szerokosc,wysokosc);
+        bPamiec.addActionListener(this);
+        bcPamiec.setFont(new Font("SansSerif",Font.BOLD,10));
+        add(bcPamiec);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
-        wyswietlacz.setBounds(x,y,250,20);
+        wyswietlacz.setBounds(x,y-25,250,20);
         wyswietlacz.setForeground(Color.BLUE);
         wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,16));
         add(wyswietlacz);
 
-        setSize(240,350);
+        setSize(240,400);
     }
 
     @Override
@@ -134,6 +144,7 @@ public class Grafika extends JFrame implements ActionListener {
                 liczba = liczba + ".";
                 przecinek = true;
             }
+            //pierwiastek
         }else if(zrodlo == bPierwiastek){
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
@@ -143,7 +154,16 @@ public class Grafika extends JFrame implements ActionListener {
             wyniks = String.valueOf(wynik);
             wyswietlacz.setText(wyniks);
             liczba = wyniks;
-
+            //pamięć kalkulatora
+        }else if(zrodlo == bPamiec) {
+            if(pamiec.equals("0")){
+                pamiec = liczba;
+            }
+            wyswietlacz.setText(pamiec);
+            liczba = pamiec;
+        //czyszczenie pamięci
+        }else if(zrodlo == bcPamiec){
+            pamiec="0";
         }
         if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
