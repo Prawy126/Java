@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class Grafika extends JFrame implements ActionListener {
     //zmienne do przycisków
     private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
-    private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz;
+    private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek;
 
     //zmienna do wyświetlacza
     JLabel wyswietlacz;
@@ -20,7 +20,7 @@ public class Grafika extends JFrame implements ActionListener {
     //zmienna do określenia które działanie trzeba wykonać
     private char znak;
 
-    private double liczba1, liczba2, wynik = 0;
+    private double liczba1 = 0, liczba2 = 0, wynik = 0;
 
     Obliczenia licz = new Obliczenia();
 
@@ -105,6 +105,10 @@ public class Grafika extends JFrame implements ActionListener {
         bWylacz.setBounds(x,y+50,szerokosc*2,wysokosc);
         bWylacz.addActionListener(this);
         add(bWylacz);
+        bPierwiastek = new JButton("√");
+        bPierwiastek.setBounds(x+100,y,szerokosc,wysokosc);
+        bPierwiastek.addActionListener(this);
+        add(bPierwiastek);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
         wyswietlacz.setBounds(x,y,250,20);
@@ -130,6 +134,16 @@ public class Grafika extends JFrame implements ActionListener {
                 liczba = liczba + ".";
                 przecinek = true;
             }
+        }else if(zrodlo == bPierwiastek){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            wynik = licz.pierwiastek(liczba1);
+            wyniks = String.valueOf(wynik);
+            wyswietlacz.setText(wyniks);
+            liczba = wyniks;
+
         }
         if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
@@ -157,6 +171,7 @@ public class Grafika extends JFrame implements ActionListener {
             znak = '/';
         //wykonywanie odpowiednich równań
         }else if(zrodlo == bRownaSie) {
+
             liczba2 = Double.parseDouble(liczba);
             liczba = "";
             przecinek = false;
@@ -183,7 +198,7 @@ public class Grafika extends JFrame implements ActionListener {
                if(liczba2!=0){
                    wyniks = String.valueOf(wynik);
                    wyswietlacz.setText(wyniks);
-               }
+               }else
                 zmianaZnaku = false;
             }
             //implementacja przycisko czyszczącego

@@ -15,4 +15,7 @@ public class Obliczenia {
         }
         return a/b;
     }
+    public double pierwiastek(double a){
+        return Math.sqrt(a);
+    }
 }
