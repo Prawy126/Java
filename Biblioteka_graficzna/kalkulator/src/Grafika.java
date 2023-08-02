@@ -229,7 +229,7 @@ public class Grafika extends JFrame implements ActionListener {
             //implementacja przycisku wyłączenia(nie jest to x w górnym prawym rogu)
         }else if(zrodlo == bWylacz) {
             dispose();
-            //implementacja przycsku do zmiany znaku liczby(trzeba go poprawić gdyż nie zawsze działa poprawnie)
+            //implementacja przycsku do zmiany znaku liczby
         }else if(zrodlo == bZnak){
             if(zmianaZnaku == false){
                 liczba= "-"+liczba;
