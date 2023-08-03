@@ -7,6 +7,10 @@ public class Grafika extends JFrame implements ActionListener {
     //zmienne do przycisków
     private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
     private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek, bPamiec, bcPamiec;
+    private JButton bSinus, bCosinus, bTangens, bCotangens;
+    private ButtonGroup grupa;
+    private JRadioButton radian, stopien;
+
 
     //zmienna do wyświetlacza
     JLabel wyswietlacz;
@@ -119,6 +123,39 @@ public class Grafika extends JFrame implements ActionListener {
         bPamiec.addActionListener(this);
         bcPamiec.setFont(new Font("SansSerif",Font.BOLD,10));
         add(bcPamiec);
+        //funkcje tygonometrynczne
+        bSinus = new JButton("Sin");
+        bSinus.setBounds(x+200,y+100,szerokosc,wysokosc);
+        bSinus.addActionListener(this);
+        bSinus.setFont(new Font("SansSerif",Font.BOLD,9));
+        add(bSinus);
+        bCosinus = new JButton("Cos");
+        bCosinus.setBounds(x+200,y+150,szerokosc,wysokosc);
+        bCosinus.addActionListener(this);
+        bCosinus.setFont(new Font("SansSerif",Font.BOLD,8));
+        add(bCosinus);
+        bTangens = new JButton("Tg");
+        bTangens.setBounds(x+200,y+200,szerokosc,wysokosc);
+        bTangens.addActionListener(this);
+        bTangens.setFont(new Font("SansSerif",Font.BOLD,9));
+        add(bTangens);
+        bCotangens = new JButton("Ctg");
+        bCotangens.setBounds(x+200,y+250,szerokosc,wysokosc);
+        bCotangens.addActionListener(this);
+        bCotangens.setFont(new Font("SansSerif",Font.BOLD,9));
+        add(bCotangens);
+        //przełączniki z radnianów na stopnie i odwrotnie
+        grupa = new ButtonGroup();
+        radian = new JRadioButton("RAD");
+        radian.setBounds(x+200,y,szerokosc,wysokosc);
+        grupa.add(radian);
+        radian.setSelected(true);
+        add(radian);
+        stopien = new JRadioButton("DEG");
+        stopien.setFont(new Font("SansSerif",Font.BOLD,9));
+        stopien.setBounds(x+200,y+40,szerokosc,wysokosc);
+        grupa.add(stopien);
+        add(stopien);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
         wyswietlacz.setBounds(x,y-25,250,20);
@@ -126,7 +163,7 @@ public class Grafika extends JFrame implements ActionListener {
         wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,16));
         add(wyswietlacz);
 
-        setSize(240,400);
+        setSize(290,400);
     }
 
     @Override
@@ -165,6 +202,32 @@ public class Grafika extends JFrame implements ActionListener {
         }else if(zrodlo == bcPamiec){
             pamiec="0";
         }
+        //przyciski od funkcji trygonometrycznych
+        if(zrodlo == bSinus){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            znak = 's';
+        }else if(zrodlo == bCosinus){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            znak = 'c';
+        }else if(zrodlo == bTangens) {
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            znak = 't';
+        }else if(zrodlo == bCosinus){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            znak = 'k';
+        }
         if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
@@ -192,24 +255,41 @@ public class Grafika extends JFrame implements ActionListener {
         //wykonywanie odpowiednich równań
         }else if(zrodlo == bRownaSie) {
 
-            liczba2 = Double.parseDouble(liczba);
-            liczba = "";
-            przecinek = false;
-            zmianaZnaku = false;
+            if(znak == 's'){
+                wynik = licz.sinus(liczba1);
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }
             if(znak == '+'){
+                liczba2 = Double.parseDouble(liczba);
+                liczba = "";
+                przecinek = false;
+                zmianaZnaku = false;
                 wynik = licz.dodawanie(liczba1, liczba2);
                 wyniks = String.valueOf(wynik);
                 wyswietlacz.setText(wyniks);
             }else if(znak == '-') {
+                liczba2 = Double.parseDouble(liczba);
+                liczba = "";
+                przecinek = false;
+                zmianaZnaku = false;
                 wynik = licz.odejmowanie(liczba1, liczba2);
                 wyniks = String.valueOf(wynik);
                 wyswietlacz.setText(wyniks);
             }else if(znak == '*'){
+                liczba2 = Double.parseDouble(liczba);
+                liczba = "";
+                przecinek = false;
+                zmianaZnaku = false;
                 wynik = licz.mnozenie(liczba1,liczba2);
                 wyniks = String.valueOf(wynik);
                 wyswietlacz.setText(wyniks);
             }else if(znak == '/'){
                try{
+                   liczba2 = Double.parseDouble(liczba);
+                   liczba = "";
+                   przecinek = false;
+                   zmianaZnaku = false;
                    wynik = licz.dzielenie(liczba1,liczba2);
                }catch (Exception a){
                    wyniks = "nie można dzielić przez 0";

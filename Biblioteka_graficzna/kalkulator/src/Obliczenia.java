@@ -18,4 +18,13 @@ public class Obliczenia {
     public double pierwiastek(double a){
         return Math.sqrt(a);
     }
+    public double sinus(double a){
+        return Math.sin(a);
+    }
+    public double cosinus(double a){
+        return Math.cos(a);
+    }
+    public double tangens(double a) {
+        return Math.tan(a);
+    }
 }
