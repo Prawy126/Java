@@ -158,9 +158,9 @@ public class Grafika extends JFrame implements ActionListener {
         add(stopien);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
-        wyswietlacz.setBounds(x,y-25,250,20);
+        wyswietlacz.setBounds(x,y-40,250,20);
         wyswietlacz.setForeground(Color.BLUE);
-        wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,16));
+        wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,20));
         add(wyswietlacz);
 
         setSize(290,400);
@@ -221,7 +221,7 @@ public class Grafika extends JFrame implements ActionListener {
             przecinek = false;
             zmianaZnaku = false;
             znak = 't';
-        }else if(zrodlo == bCosinus){
+        }else if(zrodlo == bCotangens){
             liczba1 = Double.parseDouble(liczba);
             liczba = "";
             przecinek = false;
@@ -256,7 +256,19 @@ public class Grafika extends JFrame implements ActionListener {
         }else if(zrodlo == bRownaSie) {
 
             if(znak == 's'){
-                wynik = licz.sinus(liczba1);
+                wynik = licz.sinus(liczba1, stopien.isSelected());
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(znak == 'c'){
+                wynik = licz.cosinus(liczba1, stopien.isSelected());
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(znak == 't'){
+                    wynik = licz.tangens(liczba1, stopien.isSelected());
+                    wyniks = String.valueOf(wynik);
+                    wyswietlacz.setText(wyniks);
+            }else  if(znak == 'k'){
+                wynik = licz.cotangens(liczba1, stopien.isSelected());
                 wyniks = String.valueOf(wynik);
                 wyswietlacz.setText(wyniks);
             }

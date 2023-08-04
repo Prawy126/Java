@@ -18,13 +18,41 @@ public class Obliczenia {
     public double pierwiastek(double a){
         return Math.sqrt(a);
     }
-    public double sinus(double a){
-        return Math.sin(a);
+    public double sinus(double a, boolean stopnie){
+        double pomoc, wynik;
+        if(stopnie){
+           pomoc = (a*Math.PI)/180;
+           return Math.sin(pomoc);
+        }else {
+            return Math.sin(a);
+        }
     }
-    public double cosinus(double a){
-        return Math.cos(a);
+    public double cosinus(double a, boolean stopnie){
+        double pomoc, wynik;
+        if(stopnie){
+            pomoc = (a*Math.PI)/180;
+            return Math.cos(pomoc);
+        }else {
+            return Math.cos(a);
+        }
     }
-    public double tangens(double a) {
-        return Math.tan(a);
+    public double tangens(double a, boolean stopnie) {
+        double pomoc, wynik;
+        if(stopnie){
+            pomoc = (a*Math.PI)/180;
+            return Math.tan(pomoc);
+        }else {
+            return Math.tan(a);
+        }
     }
+    public double cotangens(double a, boolean stopnie){
+        double pomoc, wynik;
+        if(stopnie){
+            pomoc = (a*Math.PI)/180;
+            return 1/Math.tan(pomoc);
+        }else {
+            return 1/Math.tan(a);
+        }
+    }
+
 }
