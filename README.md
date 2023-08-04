@@ -1,6 +1,6 @@
-# Programowanie obiektowe w języku Java <img src="https://img.shields.io/github/license/Prawy126/Java"> <img src="https://img.shields.io/github/languages/code-size/Prawy126/Java"> <img src="https://img.shields.io/github/repo-size/Prawy126/Java">
+## Programowanie obiektowe w języku Java <img src="https://img.shields.io/github/license/Prawy126/Java"> <img src="https://img.shields.io/github/languages/code-size/Prawy126/Java"> <img src="https://img.shields.io/github/repo-size/Prawy126/Java">
 To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z topowych języków programowania
-## Oto linki do poszczególnych labów oraz tematów:
+### Oto linki do poszczególnych labów oraz tematów:
 #### Zadania z laboratorium:
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab1">Laboratorium numer 1</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab2">Laboratorium numer 2</a><br>
