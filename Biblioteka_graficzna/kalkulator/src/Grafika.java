@@ -7,7 +7,7 @@ public class Grafika extends JFrame implements ActionListener {
     //zmienne do przycisków
     private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
     private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek, bPamiec, bcPamiec;
-    private JButton bSinus, bCosinus, bTangens, bCotangens;
+    private JButton bSinus, bCosinus, bTangens, bCotangens, bWartoscBezwgledna;
     private ButtonGroup grupa;
     private JRadioButton radian, stopien;
 
@@ -156,6 +156,10 @@ public class Grafika extends JFrame implements ActionListener {
         stopien.setBounds(x+200,y+40,szerokosc,wysokosc);
         grupa.add(stopien);
         add(stopien);
+        bWartoscBezwgledna = new JButton("|x|");
+        bWartoscBezwgledna.setBounds(x,y,szerokosc,wysokosc);
+        bWartoscBezwgledna.addActionListener(this);
+        add(bWartoscBezwgledna);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
         wyswietlacz.setBounds(x,y-40,250,20);
@@ -253,9 +257,18 @@ public class Grafika extends JFrame implements ActionListener {
             zmianaZnaku = false;
             znak = '/';
         //wykonywanie odpowiednich równań
+        }else if(zrodlo == bWartoscBezwgledna){
+            liczba1 = Double.parseDouble(liczba);
+            liczba="";
+            przecinek = false;
+            zmianaZnaku = false;
+            znak = 'a';
         }else if(zrodlo == bRownaSie) {
-
-            if(znak == 's'){
+            if(znak == 'a'){
+                wynik = licz.wartoscBezwzgledna(liczba1);
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(znak == 's'){
                 wynik = licz.sinus(liczba1, stopien.isSelected());
                 wyniks = String.valueOf(wynik);
                 wyswietlacz.setText(wyniks);

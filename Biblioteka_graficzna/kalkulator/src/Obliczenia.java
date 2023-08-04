@@ -54,5 +54,8 @@ public class Obliczenia {
             return 1/Math.tan(a);
         }
     }
+    public double wartoscBezwzgledna(double a){
+        return Math.abs(a);
+    }
 
 }
