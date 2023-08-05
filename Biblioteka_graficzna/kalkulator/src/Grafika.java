@@ -5,15 +5,17 @@ import java.awt.event.ActionListener;
 
 public class Grafika extends JFrame implements ActionListener {
     //zmienne do przycisków
-    private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
-    private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek, bPamiec, bcPamiec;
-    private JButton bSinus, bCosinus, bTangens, bCotangens, bWartoscBezwgledna;
-    private ButtonGroup grupa;
-    private JRadioButton radian, stopien;
-
+    final private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
+    final private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek, bPamiec, bcPamiec;
+    final private JButton bSinus, bCosinus, bTangens, bCotangens, bWartoscBezwgledna;
+    final private ButtonGroup grupa;
+    final private JRadioButton radian, stopien;
+    final private JMenu mOpcje, mPomoc;
+    final private JMenuBar menuBar;
+    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec;
 
     //zmienna do wyświetlacza
-    JLabel wyswietlacz;
+    final private JLabel wyswietlacz;
 
     //zmienna do zmiany znaku
     private boolean zmianaZnaku = false, przecinek;
@@ -28,7 +30,7 @@ public class Grafika extends JFrame implements ActionListener {
 
     Obliczenia licz = new Obliczenia();
 
-    private int x = 11, y = 55, wysokosc = 50, szerokosc = 50;
+    private int x = 11, y = 35, wysokosc = 50, szerokosc = 50;
     public Grafika(){
         setTitle("Kalkulator");
         setLayout(null);
@@ -120,7 +122,7 @@ public class Grafika extends JFrame implements ActionListener {
         add(bPamiec);
         bcPamiec = new JButton("MC");
         bcPamiec.setBounds(x+50,y,szerokosc,wysokosc);
-        bPamiec.addActionListener(this);
+        bcPamiec.addActionListener(this);
         bcPamiec.setFont(new Font("SansSerif",Font.BOLD,10));
         add(bcPamiec);
         //funkcje tygonometrynczne
@@ -162,11 +164,32 @@ public class Grafika extends JFrame implements ActionListener {
         add(bWartoscBezwgledna);
         //dodanie wyświetlacza
         wyswietlacz = new JLabel("0");
-        wyswietlacz.setBounds(x,y-40,250,20);
+        wyswietlacz.setBounds(x,y-30,250,20);
         wyswietlacz.setForeground(Color.BLUE);
         wyswietlacz.setFont(new Font("SansSerif",Font.BOLD,20));
         add(wyswietlacz);
 
+        //pasek menu
+        menuBar = new JMenuBar();
+        mOpcje = new JMenu("Opcje");
+        mOpcje.addActionListener(this);
+        mPomoc = new JMenu("Pomoc");
+        mPomoc.addActionListener(this);
+        setJMenuBar(menuBar);
+        menuBar.add(mOpcje);
+        menuBar.add(mPomoc);
+        funkcjeTrygomometryczne = new JMenuItem("Funkcje trygonomtryczne", 'F');
+        mPomoc.add(funkcjeTrygomometryczne);
+        funkcjeTrygomometryczne.addActionListener(this);
+        funkcjaBezwgledna = new JMenuItem("Funckja bezwzględna",'F');
+        mPomoc.add(funkcjaBezwgledna);
+        funkcjaBezwgledna.addActionListener(this);
+        pierwiastek = new JMenuItem("Pierwiastek",'P');
+        mPomoc.add(pierwiastek);
+        pierwiastek.addActionListener(this);
+        mPamiec = new JMenuItem("Pamięć kalkulatora",'P');
+        mPomoc.add(mPamiec);
+        mPamiec.addActionListener(this);
         setSize(290,400);
     }
 
@@ -205,6 +228,7 @@ public class Grafika extends JFrame implements ActionListener {
         //czyszczenie pamięci
         }else if(zrodlo == bcPamiec){
             pamiec="0";
+            System.out.println("Czyszczenie");
         }
         //przyciski od funkcji trygonometrycznych
         if(zrodlo == bSinus){
@@ -347,6 +371,14 @@ public class Grafika extends JFrame implements ActionListener {
                 zmianaZnaku = false;
                 wyswietlacz.setText(liczba);
             }
+        }
+        //obsługa menu bara
+        if(zrodlo == funkcjeTrygomometryczne){
+            JOptionPane.showMessageDialog(this, "Funkcje tygonometryczne działają w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć wybraną funckję a następnie znak równa się\nUwaga!!\nWyniku funkcji trygonometrycznej aktualnie nie wolono dodawać ani wykonywać obliczeń chyba że uzyje sie funkcji pamięci kalkulatora.");
+        }else if(zrodlo == mPamiec){
+            JOptionPane.showMessageDialog(this, "Funkcja pamięci kalkulatora działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć przycisk 'M+' a następnie liczba zostaje zapisana w pamięci\nUwaga!!\nTrzeba pamiętać że liczba z pamięci po wykonaniu obliczeń nie zeruje się ani nie przepada więc trzeba ręcznie ją wyczyścić za pomocą przycisku 'MC'");
+        }else if(zrodlo == pierwiastek){
+            JOptionPane.showMessageDialog(this, "Pierwaistek działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć symbol pierwiastka a następnie znak równa się by obliczyć pierwiaste\nUwaga!!\nTrzeba pamiętać że na takim wyniku nie wolno wykonywać obliczeń należy użyć pamięci kalkulatora żeby można było wykonywać obliczenia");
         }
 
     }
