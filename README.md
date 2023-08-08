@@ -29,6 +29,9 @@ Aktualnie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie
 Aktualnie prosty kalkulator czas pokaże ile uda mi się zrobić. Projekt ma na celu pokazać połączenie wykorzystania 
 bilioteki Java swing(GUI) oraz podsaw języka Java:
 <a href="https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/kalkulator">Prosty kalkulator graficzny</a><br>
+Wyszukiwarka informacji na temat pokemonów. Projekt ma na celu połączyć wykorzystanie biblioteki graficznej w Javie oraz biblioteki JSoup która służy
+do przetwarzania i analizowania dokumentów HTML i XML:
+<a href="https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/Pokemon">Wyszukiwarka informacji o pokemonach</a><br>
 
 #### Zadania domowe na wykład Algorytmy i struktury danych wykonane w języku Java:
 <a href="https://github.com/Prawy126/Java/tree/main/Algorytmy">Algorytmy i struktury danych</a><br>
