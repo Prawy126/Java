@@ -1,0 +1,22 @@
+Dugtrio
+Klasyfikacja Pokémon Kret
+Typ ziemny Dugtrio ziemnystalowy Alolański Dugtrio
+Zdolność Ziemny Schron lub Pułapka Areny Dugtrio Ziemny Schron lub Splątane Włosy Alolański Dugtrio
+Ukryta Zdolność Siła Piasku
+Płeć 50% ♂ / 50% ♀
+Wzrost 2'04"/0.7 m Dugtrio 2'04"/0.7 m Alolański Dugtrio
+Waga 73.4 lbs./33.3 kg Dugtrio 146.8 lbs./66.6 kg Alolański Dugtrio
+Ryk https://pokemon.fandom.com/pl/wiki/Plik:051.ogg
+Kanto #051
+Johto #133/#135
+Kalos #002 (Górskie Kalos)
+Alola #072/#086
+Galar #165
+Paldea #149
+Fiore R-062
+Grupa jaj Lądowe
+Czas wyklucia 20 cykli
+Wskaźnik złapania 50 (12.9%)
+Bazowe doświadcz. 153 (Gen I - IV) 149 (Gen V+)
+Bazowa przyjaźń 70
+Wskaźnik poziomowania 1,000,000

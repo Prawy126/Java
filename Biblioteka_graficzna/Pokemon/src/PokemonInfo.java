@@ -39,6 +39,9 @@ public class PokemonInfo {
         }
         return wynik;
     }
+    public String pokemnoNazwa(){
+        return pokemon;
+    }
 
 
 }

@@ -44,7 +44,17 @@ public class Grafika extends JFrame implements ActionListener {
             pokemon = new PokemonInfo(poleTekstu.getText());
            informacje =  pokemon.informacje();
             System.out.println(informacje);
-            Zapisywanie zapisywanie = new Zapisywanie(informacje);
+            Zapisywanie zapisywanie = new Zapisywanie();
+            if(zapisywanie.sprawdzenieCzyIstnieje("text.txt")){
+                zapisywanie.zapis(informacje);
+            }else{
+                zapisywanie.tworzenie(pokemon.pokemnoNazwa()+".txt");
+                if(zapisywanie.sprawdzenieCzyIstnieje(pokemon.pokemnoNazwa()+".txt")){
+                    zapisywanie.zapis(informacje);
+                }else {
+                    System.out.println("Nie udało się zapisać informacji, ponieważ nie ma uprawnień żeby stworzyć plik lub podana ścieżka pliku nie istnieje");
+                }
+            }
 
         }
     }

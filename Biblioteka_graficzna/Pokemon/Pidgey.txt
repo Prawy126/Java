@@ -1,0 +1,19 @@
+Pidgey
+Klasyfikacja Pokémon Drobny Ptak
+Typ normalnylatający
+Zdolność Bystre Oko lub Splątane Nogi
+Ukryta Zdolność Wielkie Dzioby
+Płeć 50% ♂ / 50% ♀
+Wzrost 1'00"/0.3 m
+Waga 4.0 lbs./1.8 kg
+Ryk https://pokemon.fandom.com/pl/wiki/Plik:016.ogg
+Kanto #016
+Johto #010
+Kalos #017 (Centralne Kalos)
+Oblivia R-001 N-007
+Grupa jaj Skrzydlate
+Czas wyklucia 15 cykli
+Wskaźnik złapania 255 (43.9%)
+Bazowe doświadcz. 55 (Gen I - IV) 50 (Gen V+)
+Bazowa przyjaźń 70
+Wskaźnik poziomowania 1,059,860
