@@ -30,6 +30,7 @@ public class Menu extends JFrame implements ActionListener {
         menuNarzedzia = new JMenu("Narzędzia");
         mNarz1 = new JMenuItem("Narzędzia1");
         mNarz2 = new JMenuItem("Narzędzia2");
+        mNarz2.addActionListener(this);
         menuNarzedzia.add(mNarz1);
         mNarz1.setEnabled(false);
         menuNarzedzia.add(mNarz2);
@@ -58,7 +59,13 @@ public class Menu extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object zrodlo = e.getSource();
         if(zrodlo == mWyjscie){
-            dispose();
+            int odp = JOptionPane.showConfirmDialog(null,"Czy na pewno wyjść?","Pytanie",JOptionPane.YES_NO_OPTION);
+            if(odp == JOptionPane.YES_OPTION){
+                dispose();
+            }else if(odp == JOptionPane.CLOSED_OPTION){
+                JOptionPane.showMessageDialog(null,"Tak nie robimy","Tytuł",JOptionPane.WARNING_MESSAGE);
+            }
+
         }
         if(zrodlo == chOpcja2){
             if(chOpcja2.isSelected()){
@@ -67,8 +74,15 @@ public class Menu extends JFrame implements ActionListener {
                 mNarz1.setEnabled(false);
             }
         }
+        if(zrodlo == mNarz2){
+            String sMetry = JOptionPane.showInputDialog("Podaj długość w metrach");
+            double metry = Double.parseDouble(sMetry);
+            double stopy = metry/0.3048;
+            String sStopy = String.format("%.2f",stopy);
+            JOptionPane.showMessageDialog(null,metry + " metrów = " + sStopy + " stóp");
+        }
         if(zrodlo == mOProgramy){
-            JOptionPane.showMessageDialog(this,"Program demonstruje wykorzystanie JMenuBar i JMenu\n Wersja 1.0");
+            JOptionPane.showMessageDialog(null,"Program demonstruje wykorzystanie JMenuBar i JMenu\n Wersja 1.0","Tytuł",JOptionPane.QUESTION_MESSAGE);
         }
     }
 }
