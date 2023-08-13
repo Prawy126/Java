@@ -5,48 +5,49 @@ import java.awt.event.ActionListener;
 public class Grafika extends JFrame implements ActionListener{
     final private JButton lg, sg, pg, ls,s,ps,ld,sd,pd , wyjscie;
     final private int x = 10,y = 10,szerokosc = 50,wysokosc = 50;
-    private char tablica[][] = new char[3][3];
+    public char tablica[][] = new char[3][3];
     private char znakGracza = 'X';
+    private Rozgrywka rozgrywka = new Rozgrywka();
     public Grafika(){
         setLayout(null);
-        lg = new JButton("lg");
+        lg = new JButton("");
         lg.setBounds(x,y,szerokosc, wysokosc);
         lg.addActionListener(this);
         add(lg);
-        sg = new JButton("sg");
+        sg = new JButton("");
         sg.setBounds(x+50,y,szerokosc,wysokosc);
         sg.addActionListener(this);
         add(sg);
-        pg = new JButton("pg");
+        pg = new JButton("");
         pg.setBounds(x+100,y,szerokosc,wysokosc);
         pg.addActionListener(this);
         add(pg);
-        ls = new JButton("ls");
+        ls = new JButton("");
         ls.setBounds(x,y+50,szerokosc,wysokosc);
         ls.addActionListener(this);
         add(ls);
-        s = new JButton("s");
+        s = new JButton("");
         s.setBounds(x+50,y+50,szerokosc,wysokosc);
         s.addActionListener(this);
         add(s);
-        ps = new JButton("ps");
+        ps = new JButton("");
         ps.setBounds(x+100,y+50,szerokosc,wysokosc);
         ps.addActionListener(this);
         add(ps);
-        ld = new JButton("ld");
+        ld = new JButton("");
         ld.setBounds(x,y+100,szerokosc,wysokosc);
         ld.addActionListener(this);
         add(ld);
-        sd = new JButton("sd");
+        sd = new JButton("");
         sd.setBounds(x+50,y+100,szerokosc,wysokosc);
         sd.addActionListener(this);
         add(sd);
-        pd = new JButton("pd");
+        pd = new JButton("");
         pd.setBounds(x+100,y+100,szerokosc,wysokosc);
         pd.addActionListener(this);
         add(pd);
         wyjscie = new JButton("Wyjscie");
-        wyjscie.setBounds(x+200,y+200,szerokosc,wysokosc);
+        wyjscie.setBounds(x+200,y+200,szerokosc+100,wysokosc);
         wyjscie.addActionListener(this);
         add(wyjscie);
 
@@ -61,6 +62,24 @@ public class Grafika extends JFrame implements ActionListener{
             if((tablica[1][1]!='X')||(tablica[1][1]!='O')){
                 tablica[1][1] = znakGracza;
             }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+                System.out.println("wygrana");
+            }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
             }else {
@@ -72,7 +91,24 @@ public class Grafika extends JFrame implements ActionListener{
             if((tablica[0][0]!='X')||(tablica[0][0]!='O')){
                 tablica[0][0] = znakGracza;
             }
-
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+                System.out.println("wygrana");
+            }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
             }else {
@@ -84,7 +120,24 @@ public class Grafika extends JFrame implements ActionListener{
             if((tablica[0][1]!='X')||(tablica[0][1]!='O')){
                 tablica[0][1] = znakGracza;
             }
-
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+                System.out.println("wygrana");
+            }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
             }else {
@@ -94,6 +147,24 @@ public class Grafika extends JFrame implements ActionListener{
             pg.setEnabled(false);
             if((tablica[0][2]!='X')||(tablica[0][2]!='O')){
                 tablica[0][2] = znakGracza;
+            }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+                System.out.println("wygrana");
             }
             pg.setText(String.valueOf(znakGracza));
             if(znakGracza == 'X'){
@@ -107,6 +178,24 @@ public class Grafika extends JFrame implements ActionListener{
             if((tablica[1][0]!='X')||(tablica[1][0]!='O')){
                 tablica[1][0] = znakGracza;
             }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+                System.out.println("wygrana");
+            }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
             }else {
@@ -116,6 +205,24 @@ public class Grafika extends JFrame implements ActionListener{
             ps.setEnabled(false);
             if((tablica[1][2]!='X')||(tablica[1][2]!='O')){
                 tablica[1][2] = znakGracza;
+            }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+                System.out.println("wygrana");
             }
             ps.setText(String.valueOf(znakGracza));
             if(znakGracza == 'X'){
@@ -129,6 +236,23 @@ public class Grafika extends JFrame implements ActionListener{
             if((tablica[2][0]!='X')||(tablica[2][0]!='O')){
                 tablica[2][0] = znakGracza;
             }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+            }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
             }else {
@@ -140,6 +264,23 @@ public class Grafika extends JFrame implements ActionListener{
             if((tablica[2][1]!='X')||(tablica[2][1]!='O')){
                 tablica[2][1] = znakGracza;
             }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
+            }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
             }else {
@@ -150,6 +291,23 @@ public class Grafika extends JFrame implements ActionListener{
             pd.setText(String.valueOf(znakGracza));
             if((tablica[2][2]!='X')||(tablica[2][2]!='O')){
                 tablica[2][2] = znakGracza;
+            }
+            if(rozgrywka.wygrana(tablica)){
+                for(int i = 0; i < 3;i++){
+                    for(int j = 0; j < 3; j++){
+                        System.out.print(tablica[i][j]);
+                    }
+                    System.out.println();
+                }
+                s.setEnabled(false);
+                lg.setEnabled(false);
+                sg.setEnabled(false);
+                pg.setEnabled(false);
+                ls.setEnabled(false);
+                ps.setEnabled(false);
+                ld.setEnabled(false);
+                sd.setEnabled(false);
+                pd.setEnabled(false);
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
