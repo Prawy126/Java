@@ -11,6 +11,15 @@ public class Test {
             }
             System.out.println();
         }
+        tab = rozgrywka.czyszsczenie(tab);
         System.out.println(rozgrywka.wygrana(tab));
+        for(int i = 0;i < 3;i++){
+            for(int j = 0;j < 3; j++){
+                    System.out.print(tab[i][j]);
+
+
+            }
+            System.out.println();
+        }
     }
 }

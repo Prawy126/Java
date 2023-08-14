@@ -3,11 +3,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Grafika extends JFrame implements ActionListener{
-    final private JButton lg, sg, pg, ls,s,ps,ld,sd,pd , wyjscie;
+    final private JButton lg, sg, pg, ls,s,ps,ld,sd,pd , wyjscie, nastepnaGra;
     final private int x = 10,y = 10,szerokosc = 50,wysokosc = 50;
     public char tablica[][] = new char[3][3];
     private char znakGracza = 'X';
     private Rozgrywka rozgrywka = new Rozgrywka();
+    private Gracz gracz1 = new Gracz("Gacz1",'X'),gracz2 = new Gracz("Gracz2",'O');
+    private char wygrany;
     public Grafika(){
         setLayout(null);
         lg = new JButton("");
@@ -50,6 +52,10 @@ public class Grafika extends JFrame implements ActionListener{
         wyjscie.setBounds(x+200,y+200,szerokosc+100,wysokosc);
         wyjscie.addActionListener(this);
         add(wyjscie);
+        nastepnaGra = new JButton("Następna Gra");
+        nastepnaGra.setBounds(x+200,y+300,szerokosc+200,wysokosc);
+        nastepnaGra.addActionListener(this);
+        add(nastepnaGra);
 
     }
 
@@ -78,7 +84,12 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
-                System.out.println("wygrana");
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -107,7 +118,12 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
-                System.out.println("wygrana");
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -136,7 +152,12 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
-                System.out.println("wygrana");
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -164,7 +185,18 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
-                System.out.println("wygrana");
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
+
+                System.out.println(gracz1.getWynik()+" : "+gracz2.getWynik());
+            }
+            if(rozgrywka.sprawdzCzyRemis(tablica))
+            {
+                System.out.println("remis");
             }
             pg.setText(String.valueOf(znakGracza));
             if(znakGracza == 'X'){
@@ -194,7 +226,16 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
-                System.out.println("wygrana");
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
+            }
+            if(rozgrywka.sprawdzCzyRemis(tablica))
+            {
+                System.out.println("remis");
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -222,7 +263,16 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
-                System.out.println("wygrana");
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
+            }
+            if(rozgrywka.sprawdzCzyRemis(tablica))
+            {
+                System.out.println("remis");
             }
             ps.setText(String.valueOf(znakGracza));
             if(znakGracza == 'X'){
@@ -252,6 +302,16 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
+            }
+            if(rozgrywka.sprawdzCzyRemis(tablica))
+            {
+                System.out.println("remis");
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -280,6 +340,16 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
+            }
+            if(rozgrywka.sprawdzCzyRemis(tablica))
+            {
+                System.out.println("remis");
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -308,6 +378,17 @@ public class Grafika extends JFrame implements ActionListener{
                 ld.setEnabled(false);
                 sd.setEnabled(false);
                 pd.setEnabled(false);
+                wygrany = rozgrywka.kto(tablica);
+                if(gracz1.getZnak() == wygrany){
+                    gracz1.wygrana();
+                }else {
+                    gracz2.wygrana();
+                }
+
+            }
+            if(rozgrywka.sprawdzCzyRemis(tablica))
+            {
+                System.out.println("remis");
             }
             if(znakGracza == 'X'){
                 znakGracza = 'O';
@@ -315,7 +396,7 @@ public class Grafika extends JFrame implements ActionListener{
                 znakGracza = 'X';
             }
         }
-        /*if(zrodlo == wyjscie){
+        if(zrodlo == wyjscie){
             for(int i = 0; i < 3;i++){
                 for(int j = 0; j < 3; j++){
                     System.out.print(tablica[i][j]);
@@ -323,6 +404,17 @@ public class Grafika extends JFrame implements ActionListener{
                 System.out.println();
             }
             dispose();
-        }*/
+        }else if(zrodlo == nastepnaGra){
+            tablica = rozgrywka.czyszsczenie(tablica);
+            s.setEnabled(true);
+            lg.setEnabled(true);
+            sg.setEnabled(true);
+            pg.setEnabled(true);
+            ls.setEnabled(true);
+            ps.setEnabled(true);
+            ld.setEnabled(true);
+            sd.setEnabled(true);
+            pd.setEnabled(true);
+        }
     }
 }
