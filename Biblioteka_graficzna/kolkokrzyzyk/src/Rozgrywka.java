@@ -42,7 +42,7 @@ public class Rozgrywka {
         int sprawdz = 0;
         for(int i = 0;i < 3;i++){
             for(int j = 0;j < 3; j++){
-                if(tab[i][j]=='X'||tab[i][j]=='O'){
+                if(tab[i][j]!='\u0000'){
                     sprawdz++;
                 }
             }

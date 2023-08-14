@@ -1,7 +1,7 @@
 public class Gracz {
     private char znak;
     private String nazwa;
-    private int wynik;
+    private float wynik = 0;
     public Gracz(String nazwa, char znak){
         this.nazwa = nazwa;
         this.znak = znak;
@@ -23,5 +23,8 @@ public class Gracz {
     }
     public void wygrana(){
         wynik ++;
+    }
+    public void remis(){
+        wynik = wynik+0.5f;
     }
 }
