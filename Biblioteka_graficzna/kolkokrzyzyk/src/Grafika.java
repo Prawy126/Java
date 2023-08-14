@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -56,6 +57,8 @@ public class Grafika extends JFrame implements ActionListener{
         nastepnaGra.setBounds(x+200,y+300,szerokosc+200,wysokosc);
         nastepnaGra.addActionListener(this);
         add(nastepnaGra);
+        wyjscie.setBackground(Color.RED);
+
 
     }
 
@@ -415,6 +418,15 @@ public class Grafika extends JFrame implements ActionListener{
             ld.setEnabled(true);
             sd.setEnabled(true);
             pd.setEnabled(true);
+            s.setText("");
+            lg.setText("");
+            sg.setText("");
+            pg.setText("");
+            ls.setText("");
+            ps.setText("");
+            ld.setText("");
+            sd.setText("");
+            pd.setText("");
         }
     }
 }
