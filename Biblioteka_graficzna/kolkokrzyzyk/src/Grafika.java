@@ -11,7 +11,6 @@ public class Grafika extends JFrame implements ActionListener {
     private JMenuBar menuBar;
     private JMenu menuOpcje, menuPomoc, menuInfoarmacje;
     private JMenuItem mUstawNickGracza1, mUstawNickGracza2, mJakGrac, mInformacje;
-    private String graczX, graczO;
     private Rozgrywka rozgrywka = new Rozgrywka();
     private Gracz gracz1 = new Gracz("Gacz1", 'X'), gracz2 = new Gracz("Gracz2", 'O');
     private char wygrany;
@@ -75,6 +74,7 @@ public class Grafika extends JFrame implements ActionListener {
         mUstawNickGracza1 = new JMenuItem("Ustaw nick gracza 1");
         mUstawNickGracza1.setToolTipText("Ustaw nick gracza grającego X");
         menuOpcje.add(mUstawNickGracza1);
+        mUstawNickGracza1.addActionListener(this);
         menuBar.add(menuOpcje);
         setJMenuBar(menuBar);
         mUstawNickGracza1.addActionListener(this);
@@ -82,6 +82,16 @@ public class Grafika extends JFrame implements ActionListener {
         mUstawNickGracza2.setToolTipText("Ustaw nick gracza grającego O");
         menuOpcje.add(mUstawNickGracza2);
         mUstawNickGracza2.addActionListener(this);
+        menuInfoarmacje = new JMenu("Inforamcje");
+        mInformacje = new JMenuItem("Inforamcje o grze",'I');
+        menuInfoarmacje.add(mInformacje);
+        mInformacje.addActionListener(this);
+        menuBar.add(menuInfoarmacje);
+        menuPomoc = new JMenu("Pomoc");
+        mJakGrac = new JMenuItem("Jak grać",'a');
+        menuPomoc.add(mJakGrac);
+        mJakGrac.addActionListener(this);
+        menuBar.add(menuPomoc);
 
         //wynik gry
         aktualniGracze = new JLabel(gracz1.getNazwa() + " : " + gracz2.getNazwa());
@@ -498,6 +508,29 @@ public class Grafika extends JFrame implements ActionListener {
             sd.setText("");
             pd.setText("");
             aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
+            znakGracza = 'X';
+        }
+        //kod odpowiedzialny za funkcjonowanie menu gry
+        if(zrodlo == mUstawNickGracza1){
+            String nazwa = JOptionPane.showInputDialog("Podaj nazwę gracza 1(gracz X):");
+            if(nazwa!=null){
+                gracz1.setNazwa(nazwa);
+            }
+            aktualniGracze.setText(gracz1.getNazwa()+" : "+gracz2.getNazwa());
+        }else if(zrodlo == mUstawNickGracza2){
+            String nazwa = JOptionPane.showInputDialog("Podaj nazwę gracza 2(gracz O):");
+            if(nazwa!= null){
+                gracz2.setNazwa(nazwa);
+            }
+            aktualniGracze.setText(gracz1.getNazwa()+" : "+gracz2.getNazwa());
+        }
+
+        if(zrodlo == mInformacje){
+            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\n1.4","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
+
+        }
+        if(zrodlo == mJakGrac){
+            JOptionPane.showMessageDialog(null,"Jak zacząć grać\nPierwszy zawsze rozpoczyna gracz krzyżyk, a dopiero drugi ruch ma gracz kółko\nWynik rozgrywki jest cały czas wyświetlany wraz z nickami\nŻeby wygrać dany gracz musi zapełnić 3 pola swoim znakiem w pionie, poziomie lub po skosie\nTeraz już wiesz wszystko więc życzę powodzenia i myłej gry","Jak grać?",JOptionPane.QUESTION_MESSAGE);
         }
 
     }
