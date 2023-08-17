@@ -1,7 +1,8 @@
 import java.util.Random;
 
 public class Bot {
-    public char[][] latwy(char tab[][], char znak){
+    public Ruch latwy(char tab[][], char znak){
+
         int x = losowanie(), y = losowanie();
         if(sprawdzCzyWolne(tab,x,y)){
             tab[x][y]=znak;
@@ -10,19 +11,21 @@ public class Bot {
             y = losowanie();
             latwy(tab,znak);
         }
-        return tab;
+        Ruch ruch = new Ruch(x,y,znak);
+        return ruch;
     }
 
     private int losowanie(){
         Random random = new Random();
-        return random.nextInt();
+
+        return Math.abs(random.nextInt()%3);
     }
 
     private boolean sprawdzCzyWolne(char tab[][], int a, int b){
-        if(tab[a][b] == '\u0000'){
-            return true;
-        }else {
+        if(tab[a][b] == 'X'||tab[a][b]=='O'){
             return false;
+        }else {
+            return true;
         }
     }
 }

@@ -6,19 +6,24 @@ import java.awt.event.ActionListener;
 public class Grafika extends JFrame implements ActionListener {
     final private JButton lg, sg, pg, ls, s, ps, ld, sd, pd, wyjscie, nastepnaGra;
     final private int x = 10, y = 10, szerokosc = 50, wysokosc = 50;
+    private int pomocX, pomocY;
     public char tablica[][] = new char[3][3];
+    private Ruch ruch;
     private char znakGracza = 'X';
     private JMenuBar menuBar;
     private JMenu menuOpcje, menuPomoc, menuInfoarmacje;
-    private JMenuItem mUstawNickGracza1, mUstawNickGracza2, mJakGrac, mInformacje;
+    private JMenuItem mUstawNickGracza1, mUstawNickGracza2, mJakGrac, mInformacje, mUstawanieBota;
+    private JCheckBoxMenuItem botLatwyKolko, botlatwyKrzyzyk;
     private Rozgrywka rozgrywka = new Rozgrywka();
     private Gracz gracz1 = new Gracz("Gacz1", 'X'), gracz2 = new Gracz("Gracz2", 'O');
     private char wygrany;
     private JLabel aktualniGracze, aktualnyWynik;
+    private boolean graczX = false, graczY = false;
 
     public Grafika() {
         //tworzenie przycisków gry
         setLayout(null);
+        setBackground(Color.blue);
         lg = new JButton("");
         lg.setBounds(x, y, szerokosc, wysokosc);
         lg.addActionListener(this);
@@ -92,6 +97,15 @@ public class Grafika extends JFrame implements ActionListener {
         menuPomoc.add(mJakGrac);
         mJakGrac.addActionListener(this);
         menuBar.add(menuPomoc);
+        mUstawanieBota = new JMenuItem("Ustawienie bota",'U');
+        menuOpcje.add(mUstawanieBota);
+        botLatwyKolko = new JCheckBoxMenuItem("Bot gra jako gracz 2(O)");
+        botlatwyKrzyzyk = new JCheckBoxMenuItem("Bot gra jako gracz 1(X)");
+        botlatwyKrzyzyk.addActionListener(this);
+        botLatwyKolko.addActionListener(this);
+        mUstawanieBota.add(botLatwyKolko);
+        mUstawanieBota.add(botlatwyKrzyzyk);
+        botlatwyKrzyzyk.setState(true);
 
         //wynik gry
         aktualniGracze = new JLabel(gracz1.getNazwa() + " : " + gracz2.getNazwa());
@@ -100,6 +114,8 @@ public class Grafika extends JFrame implements ActionListener {
         aktualnyWynik = new JLabel(gracz1.getWynik() + " : " + gracz2.getWynik());
         aktualnyWynik.setBounds(x, y + 250, szerokosc, wysokosc);
         add(aktualnyWynik);
+
+
 
     }
 
@@ -532,6 +548,97 @@ public class Grafika extends JFrame implements ActionListener {
         if(zrodlo == mJakGrac){
             JOptionPane.showMessageDialog(null,"Jak zacząć grać\nPierwszy zawsze rozpoczyna gracz krzyżyk, a dopiero drugi ruch ma gracz kółko\nWynik rozgrywki jest cały czas wyświetlany wraz z nickami\nŻeby wygrać dany gracz musi zapełnić 3 pola swoim znakiem w pionie, poziomie lub po skosie\nTeraz już wiesz wszystko więc życzę powodzenia i myłej gry","Jak grać?",JOptionPane.QUESTION_MESSAGE);
         }
+        if(botLatwyKolko.getState()){
+            if(znakGracza == 'O'){
+                ruch =  bot(tablica,'O');
+                pomocX = ruch.getX();
+                pomocY = ruch.getY();
+                if(pomocX==0){
+                    if(pomocY == 0){
+                        lg.setText("O");
+                        lg.setEnabled(false);
+                    }else if(pomocY == 1){
+                        sg.setText("O");
+                        sg.setEnabled(false);
+                    }else if(pomocY == 2){
+                        pg.setText("O");
+                        pg.setEnabled(false);
+                    }
+                } else if (pomocX == 1) {
+                    if(pomocY == 0){
+                        ls.setText("O");
+                        ls.setEnabled(false);
+                    }else if(pomocY == 1){
+                        s.setText("O");
+                        s.setEnabled(false);
+                    }else if(pomocY == 2){
+                        ps.setEnabled(false);
+                        ps.setText(")");
+                    }
+                }else if(pomocX == 2){
+                    if(pomocY == 0){
+                        ld.setText("O");
+                        ld.setEnabled(false);
+                    }else if(pomocY == 1){
+                        sd.setText("O");
+                        sd.setEnabled(false);
+                    }else if(pomocY == 2){
+                        ps.setEnabled(false);
+                        ps.setText("O");
+                    }
+                }
+                znakGracza = 'X';
+            }
+        }
+        if(botlatwyKrzyzyk.getState()){
+            if(znakGracza == 'X'){
+                ruch = bot(tablica,'X');
+                pomocX = ruch.getX();
+                pomocY = ruch.getY();
+                if(pomocX==0){
+                    if(pomocY == 0){
+                        lg.setText("X");
+                        lg.setEnabled(false);
+                    }else if(pomocY == 1){
+                        sg.setText("X");
+                        sg.setEnabled(false);
+                    }else if(pomocY == 2){
+                        pg.setText("X");
+                        pg.setEnabled(false);
+                    }
+                } else if (pomocX == 1) {
+                    if(pomocY == 0){
+                        ls.setText("X");
+                        ls.setEnabled(false);
+                    }else if(pomocY == 1){
+                        s.setText("X");
+                        s.setEnabled(false);
+                    }else if(pomocY == 2){
+                        ps.setEnabled(false);
+                        ps.setText("X");
+                    }
+                }else if(pomocX == 2){
+                    if(pomocY == 0){
+                        ld.setText("X");
+                        ld.setEnabled(false);
+                    }else if(pomocY == 1){
+                        sd.setText("X");
+                        sd.setEnabled(false);
+                    }else if(pomocY == 2){
+                        ps.setEnabled(false);
+                        ps.setText("X");
+                    }
+                }
+                znakGracza = 'O';
+            }
+        }
+    }
 
+    private Ruch bot(char[][]tab, char znak){
+        Bot bot = new Bot();
+        graczX = false;
+        graczY = false;
+
+        return bot.latwy(tab,znak);
     }
 }
