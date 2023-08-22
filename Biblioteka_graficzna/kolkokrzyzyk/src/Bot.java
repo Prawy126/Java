@@ -1,6 +1,8 @@
 import java.util.Random;
 
 public class Bot {
+    private Random random = new Random();
+    private Ruch ruch;
     public Ruch latwy(char tab[][], char znak){
 
         int x = losowanie(), y = losowanie();
@@ -11,12 +13,12 @@ public class Bot {
             y = losowanie();
             latwy(tab,znak);
         }
-        Ruch ruch = new Ruch(x,y,znak);
+        ruch = new Ruch(x,y,znak);
         return ruch;
     }
 
     private int losowanie(){
-        Random random = new Random();
+
 
         return Math.abs(random.nextInt()%3);
     }

@@ -103,9 +103,9 @@ public class Grafika extends JFrame implements ActionListener {
         botlatwyKrzyzyk = new JCheckBoxMenuItem("Bot gra jako gracz 1(X)");
         botlatwyKrzyzyk.addActionListener(this);
         botLatwyKolko.addActionListener(this);
-        mUstawanieBota.add(botLatwyKolko);
-        mUstawanieBota.add(botlatwyKrzyzyk);
-        botlatwyKrzyzyk.setState(true);
+        //mUstawanieBota.add(botLatwyKolko);
+        //mUstawanieBota.add(botlatwyKrzyzyk);
+        botlatwyKrzyzyk.setState(false);
 
         //wynik gry
         aktualniGracze = new JLabel(gracz1.getNazwa() + " : " + gracz2.getNazwa());
@@ -542,7 +542,7 @@ public class Grafika extends JFrame implements ActionListener {
         }
 
         if(zrodlo == mInformacje){
-            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\n1.4","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\nOpen beta 1.4.1","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
 
         }
         if(zrodlo == mJakGrac){
