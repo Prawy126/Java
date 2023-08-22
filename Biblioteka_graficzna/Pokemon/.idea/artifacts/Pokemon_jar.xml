@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Pokemon:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pokemon_jar</output-path>
+    <root id="archive" name="Pokemon.jar">
+      <element id="module-output" name="Pokemon" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/jsoup-1.16.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
