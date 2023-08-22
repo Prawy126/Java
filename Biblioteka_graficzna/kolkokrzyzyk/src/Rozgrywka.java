@@ -37,6 +37,7 @@ public class Rozgrywka {
     public boolean sprawdzCzyRemis(char[][] tab){
         boolean odpowiedz;
         if(wygrana(tab)){
+            System.out.println("Brak remusu");
             return false;
         }
         int sprawdz = 0;
@@ -48,8 +49,13 @@ public class Rozgrywka {
             }
         }
         if(sprawdz == 9){
+            System.out.println("Remis");
             return true;
-        }else return false;
+
+        }else {
+            System.out.println("Brak remisu");
+            return false;
+        }
     }
     public char[][] czyszsczenie(char[][] tab){
         for(int i = 0;i < 3;i++){

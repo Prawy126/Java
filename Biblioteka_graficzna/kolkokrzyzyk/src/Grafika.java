@@ -151,11 +151,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz2.remis();
-                    gracz1.remis();
-                    aktualnyWynik.setText(String.valueOf(gracz1.getWynik())+" : "+String.valueOf(gracz2.getWynik()));
                 }
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
             if (znakGracza == 'X') {
                 znakGracza = 'O';
@@ -191,11 +191,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
             if (znakGracza == 'X') {
                 znakGracza = 'O';
@@ -231,11 +231,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
             if (znakGracza == 'X') {
                 znakGracza = 'O';
@@ -270,13 +270,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
-
-
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
             pg.setText(String.valueOf(znakGracza));
             if (znakGracza == 'X') {
@@ -313,11 +311,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
 
             if (znakGracza == 'X') {
@@ -353,11 +351,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
 
             ps.setText(String.valueOf(znakGracza));
@@ -395,14 +393,11 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
-            }
-            if (rozgrywka.sprawdzCzyRemis(tablica)) {
-                System.out.println("remis");
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
             if (znakGracza == 'X') {
                 znakGracza = 'O';
@@ -443,9 +438,10 @@ public class Grafika extends JFrame implements ActionListener {
                     gracz2.remis();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
-            }
-            if (rozgrywka.sprawdzCzyRemis(tablica)) {
-                System.out.println("remis");
+            }if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
             if (znakGracza == 'X') {
                 znakGracza = 'O';
@@ -481,12 +477,12 @@ public class Grafika extends JFrame implements ActionListener {
                 } else if(gracz2.getZnak()==wygrany){
                     gracz2.wygrana();
                     aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
-                }else if(rozgrywka.sprawdzCzyRemis(tablica)){
-                    gracz1.remis();
-                    gracz2.remis();
-                    aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
                 }
 
+            }else if(rozgrywka.sprawdzCzyRemis(tablica)){
+                gracz1.remis();
+                gracz2.remis();
+                aktualnyWynik.setText(gracz1.getWynik()+" : "+gracz2.getWynik());
             }
 
             if (znakGracza == 'X') {
@@ -542,7 +538,7 @@ public class Grafika extends JFrame implements ActionListener {
         }
 
         if(zrodlo == mInformacje){
-            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\nOpen beta 1.4.1","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\n 1.4.1","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
 
         }
         if(zrodlo == mJakGrac){
