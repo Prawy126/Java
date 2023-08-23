@@ -57,5 +57,18 @@ public class Obliczenia {
     public double wartoscBezwzgledna(double a){
         return Math.abs(a);
     }
+    public String dziesietnyNaDwojkowy(int a) {
+        System.out.println("Przed"+a);
+        StringBuilder wynik = new StringBuilder();
+        while (a > 0) {
+            int reszta = a % 2;
+            wynik.insert(0, reszta);
+            a = a / 2;
+            System.out.println("W trakcie" + a);
+        }
+        System.out.println(wynik.toString());
+        return wynik.toString();
+    }
+
 
 }

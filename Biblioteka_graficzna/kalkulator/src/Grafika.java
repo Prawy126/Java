@@ -12,7 +12,7 @@ public class Grafika extends JFrame implements ActionListener {
     final private JRadioButton radian, stopien;
     final private JMenu mOpcje, mPomoc;
     final private JMenuBar menuBar;
-    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec;
+    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec, zamanaNaDwojkowy;
 
     //zmienna do wyświetlacza
     final private JLabel wyswietlacz;
@@ -190,6 +190,9 @@ public class Grafika extends JFrame implements ActionListener {
         mPamiec = new JMenuItem("Pamięć kalkulatora",'P');
         mPomoc.add(mPamiec);
         mPamiec.addActionListener(this);
+        zamanaNaDwojkowy = new JMenuItem("Zamiana z systemu dziesiętnego na dwójkowy");
+        zamanaNaDwojkowy.addActionListener(this);
+        mOpcje.add(zamanaNaDwojkowy);
         setSize(290,400);
     }
 
@@ -379,6 +382,11 @@ public class Grafika extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(this, "Funkcja pamięci kalkulatora działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć przycisk 'M+' a następnie liczba zostaje zapisana w pamięci\nUwaga!!\nTrzeba pamiętać że liczba z pamięci po wykonaniu obliczeń nie zeruje się ani nie przepada więc trzeba ręcznie ją wyczyścić za pomocą przycisku 'MC'");
         }else if(zrodlo == pierwiastek){
             JOptionPane.showMessageDialog(this, "Pierwaistek działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć symbol pierwiastka a następnie znak równa się by obliczyć pierwiaste\nUwaga!!\nTrzeba pamiętać że na takim wyniku nie wolno wykonywać obliczeń należy użyć pamięci kalkulatora żeby można było wykonywać obliczenia");
+        }else if(zrodlo == zamanaNaDwojkowy){
+            String liczba = JOptionPane.showInputDialog(this,"Podaj liczbę w systemie dziesiętnym:");
+            int liczba1 =Integer.valueOf(liczba);
+            String koniec = licz.dziesietnyNaDwojkowy(liczba1);
+            JOptionPane.showMessageDialog(this, liczba + " w systemie dwójkowym wygląda następująco: " + koniec);
         }
 
     }
