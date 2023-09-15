@@ -70,5 +70,14 @@ public class Obliczenia {
         return wynik.toString();
     }
 
-
+    public double potegowanie(int a, int b)throws NegativeException{
+        if(b<0){
+            throw new NegativeException();
+        }
+        double wynik = 1;
+        for(int i = 0; i<b;i++){
+            wynik = wynik*a;
+        }
+        return wynik;
+    }
 }
