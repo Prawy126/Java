@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class Menu extends JFrame implements ActionListener {
     private JMenuBar menuBar;
@@ -17,7 +18,9 @@ public class Menu extends JFrame implements ActionListener {
         menuPlik = new JMenu("Plik");
 
         mOtworz = new JMenuItem("Otwórz", 'O');
+        mOtworz.addActionListener(this);
         mZapisz = new JMenuItem("Zapisz");
+        mZapisz.addActionListener(this);
         mWyjscie = new JMenuItem("Wyjście");
         menuPlik.add(mOtworz);
         menuPlik.add(mZapisz);
@@ -58,7 +61,20 @@ public class Menu extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object zrodlo = e.getSource();
-        if(zrodlo == mWyjscie){
+        if(zrodlo == mOtworz){
+            JFileChooser fc = new JFileChooser();
+            if(fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                File plik = fc.getSelectedFile();
+                JOptionPane.showMessageDialog(null,"Wybrany plik to " + plik.getAbsolutePath());
+            }
+        }else if(zrodlo == mZapisz){
+            JFileChooser fc = new JFileChooser();
+            if(fc.showSaveDialog(null) == JFileChooser.APPROVE_OPTION){
+                File plik = fc.getSelectedFile();
+                JOptionPane.showMessageDialog(null,"Wybrany plik to " + plik);
+            }
+        }
+        else if(zrodlo == mWyjscie){
             int odp = JOptionPane.showConfirmDialog(null,"Czy na pewno wyjść?","Pytanie",JOptionPane.YES_NO_OPTION);
             if(odp == JOptionPane.YES_OPTION){
                 dispose();
