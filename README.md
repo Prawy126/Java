@@ -41,4 +41,4 @@ do przetwarzania i analizowania dokumentów HTML i XML:
 <a href="https://github.com/Prawy126/Java/tree/main/Kurs_Kanal_O_Wszystkim">Kurs języka Java z kanału kanał o wszystkim</a><br>
 
 ### Oto licencja tego repozytorium:
-<a href="https://github.com/Prawy126/Java/tree/main/LICENSE">Licencja MIT</a><br>
+<a href="https://github.com/Prawy126/Java/tree/main/LICENSE">Licencja MIT</a>
