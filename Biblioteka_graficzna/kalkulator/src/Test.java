@@ -1,11 +1,8 @@
 public class Test {
     public static void main(String[] args){
         Obliczenia obliczenia = new Obliczenia();
-        try{
-            System.out.println(obliczenia.potegowanie(-23,0));
-        }catch(NegativeException e){
-            System.out.println(e.getMessage());
-        }
+        String liczba  = obliczenia.innySystem(17,16);
+        System.out.println(liczba);
 
     }
 }

@@ -57,18 +57,6 @@ public class Obliczenia {
     public double wartoscBezwzgledna(double a){
         return Math.abs(a);
     }
-    public String dziesietnyNaDwojkowy(int a) {
-        System.out.println("Przed"+a);
-        StringBuilder wynik = new StringBuilder();
-        while (a > 0) {
-            int reszta = a % 2;
-            wynik.insert(0, reszta);
-            a = a / 2;
-            System.out.println("W trakcie" + a);
-        }
-        System.out.println(wynik.toString());
-        return wynik.toString();
-    }
 
     public double potegowanie(int a, int b)throws NegativeException{
         if(b<0){
@@ -80,4 +68,37 @@ public class Obliczenia {
         }
         return wynik;
     }
+
+    public String innySystem(int a, int podstawa) {
+        StringBuilder liczbaKoncowa = new StringBuilder();
+
+        if (a < podstawa) {
+            return String.valueOf(a);
+        }
+
+        while (a >= podstawa) {
+            int reszta = a % podstawa;
+            if (reszta < 10) {
+                liczbaKoncowa.insert(0, reszta); // Dodaj resztę na początek
+            } else {
+                // Jeśli reszta >= 10, użyj liter A-F dla szesnastkowego
+                char cyfraHex = (char) ('A' + (reszta - 10));
+                liczbaKoncowa.insert(0, cyfraHex); // Dodaj literę na początek
+            }
+            a = a / podstawa;
+        }
+
+        // Dodaj ostatnią cyfrę (lub literę) na początek wyniku
+        if (a < 10) {
+            liczbaKoncowa.insert(0, a);
+        } else {
+            char cyfraHex = (char) ('A' + (a - 10));
+            liczbaKoncowa.insert(0, cyfraHex);
+        }
+
+        return liczbaKoncowa.toString();
+    }
+
 }
+
+

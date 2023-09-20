@@ -12,7 +12,7 @@ public class Grafika extends JFrame implements ActionListener {
     final private JRadioButton radian, stopien;
     final private JMenu mOpcje, mPomoc;
     final private JMenuBar menuBar;
-    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec, zamanaNaDwojkowy;
+    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec, zamanaNaDwojkowy, zamanaNaOsemkowy, zamanaNaSzestnastkowy;
 
     //zmienna do wyświetlacza
     final private JLabel wyswietlacz;
@@ -190,9 +190,16 @@ public class Grafika extends JFrame implements ActionListener {
         mPamiec = new JMenuItem("Pamięć kalkulatora",'P');
         mPomoc.add(mPamiec);
         mPamiec.addActionListener(this);
-        zamanaNaDwojkowy = new JMenuItem("Zamiana z systemu dziesiętnego na dwójkowy");
+        zamanaNaDwojkowy = new JMenuItem("Zamiana z systemu dziesiętnego na dwójkowy",'Z');
         zamanaNaDwojkowy.addActionListener(this);
         mOpcje.add(zamanaNaDwojkowy);
+
+        zamanaNaOsemkowy = new JMenuItem("Zamiana z systemu dziesiętnego na ósemkowy",'Z');
+        zamanaNaOsemkowy.addActionListener(this);
+        mOpcje.add(zamanaNaOsemkowy);
+        zamanaNaSzestnastkowy = new JMenuItem("Zamiana z systemu dziesiętnego na szesnastkowy",'Z');
+        zamanaNaSzestnastkowy.addActionListener(this);
+        mOpcje.add(zamanaNaSzestnastkowy);
         setSize(290,400);
     }
 
@@ -385,8 +392,20 @@ public class Grafika extends JFrame implements ActionListener {
         }else if(zrodlo == zamanaNaDwojkowy){
             String liczba = JOptionPane.showInputDialog(this,"Podaj liczbę w systemie dziesiętnym:");
             int liczba1 =Integer.valueOf(liczba);
-            String koniec = licz.dziesietnyNaDwojkowy(liczba1);
+            String koniec = licz.innySystem(liczba1,2);
             JOptionPane.showMessageDialog(this, liczba + " w systemie dwójkowym wygląda następująco: " + koniec);
+        }
+        else if(zrodlo == zamanaNaOsemkowy){
+            String liczba = JOptionPane.showInputDialog(this,"Podaj liczbę w systemie dziesiętnym:");
+            int liczba1 =Integer.valueOf(liczba);
+            String koniec = licz.innySystem(liczba1,8);
+            JOptionPane.showMessageDialog(this, liczba + " w systemie ósemkowym wygląda następująco: " + koniec);
+        }
+        else if(zrodlo == zamanaNaSzestnastkowy){
+            String liczba = JOptionPane.showInputDialog(this,"Podaj liczbę w systemie dziesiętnym:");
+            int liczba1 =Integer.valueOf(liczba);
+            String koniec = licz.innySystem(liczba1, 16);
+            JOptionPane.showMessageDialog(this, liczba + " w systemie szesnastkowym wygląda następująco: " + koniec);
         }
 
     }
