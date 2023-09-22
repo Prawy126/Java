@@ -15,7 +15,7 @@ public class Grafika extends JFrame implements ActionListener {
     private JMenuItem mUstawNickGracza1, mUstawNickGracza2, mJakGrac, mInformacje, mUstawanieBota;
     private JCheckBoxMenuItem botLatwyKolko, botlatwyKrzyzyk;
     private Rozgrywka rozgrywka = new Rozgrywka();
-    private Gracz gracz1 = new Gracz("Gacz1", 'X'), gracz2 = new Gracz("Gracz2", 'O');
+    private Gracz gracz1 = new Gracz("Gacz X", 'X'), gracz2 = new Gracz("Gracz O", 'O');
     private char wygrany;
     private JLabel aktualniGracze, aktualnyWynik;
     private boolean graczX = false, graczY = false;
@@ -135,15 +135,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -175,15 +167,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -215,15 +199,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -254,15 +230,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -295,15 +263,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -335,15 +295,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -377,15 +329,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -417,15 +361,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -461,15 +397,7 @@ public class Grafika extends JFrame implements ActionListener {
                     }
                     System.out.println();
                 }
-                s.setEnabled(false);
-                lg.setEnabled(false);
-                sg.setEnabled(false);
-                pg.setEnabled(false);
-                ls.setEnabled(false);
-                ps.setEnabled(false);
-                ld.setEnabled(false);
-                sd.setEnabled(false);
-                pd.setEnabled(false);
+                koniec();
                 wygrany = rozgrywka.kto(tablica);
                 if (gracz1.getZnak() == wygrany) {
                     gracz1.wygrana();
@@ -538,7 +466,7 @@ public class Grafika extends JFrame implements ActionListener {
         }
 
         if(zrodlo == mInformacje){
-            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\n 1.4.1","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Gra w kółko krzyżyk\nGra stworzona żeby przećwiczyć umiejętności programowania w Javie\nAktualna wersja gry:\n 1.0.1","Informacje o grze",JOptionPane.INFORMATION_MESSAGE);
 
         }
         if(zrodlo == mJakGrac){
@@ -636,5 +564,17 @@ public class Grafika extends JFrame implements ActionListener {
         graczY = false;
 
         return bot.latwy(tab,znak);
+    }
+
+    private void koniec(){
+        s.setEnabled(false);
+        lg.setEnabled(false);
+        sg.setEnabled(false);
+        pg.setEnabled(false);
+        ls.setEnabled(false);
+        ps.setEnabled(false);
+        ld.setEnabled(false);
+        sd.setEnabled(false);
+        pd.setEnabled(false);
     }
 }

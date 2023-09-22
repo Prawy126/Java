@@ -22,7 +22,7 @@ public class Rozgrywka {
                 wynik = tab[0][i];
                 return wynik;
             } else if (tab[i][0] != '\u0000' && tab[i][0] == tab[i][1] && tab[i][1] == tab[i][2]) {
-                wynik = tab[0][i];
+                wynik = tab[i][0];
                 return wynik;
             }
         }
