@@ -2,8 +2,7 @@
 To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z topowych języków programowania
 ### Oto linki do poszczególnych labów oraz tematów:
 #### Zadania z laboratorium:
-[Laboratorium numer 1](https://github.com/Prawy126/Java/tree/main/Laby/lab1)
-
+[Laboratorium numer 1](https://github.com/Prawy126/Java/tree/main/Laby/lab1)  
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab2">Laboratorium numer 2</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/Lab3">Laboratorium numer 3</a><br>
 <a href="https://github.com/Prawy126/Java/tree/main/Laby/lab%204">Laboratorium numer 4</a><br>
