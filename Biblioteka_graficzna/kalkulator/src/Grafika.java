@@ -12,7 +12,7 @@ public class Grafika extends JFrame implements ActionListener {
     final private JRadioButton radian, stopien;
     final private JMenu mOpcje, mPomoc;
     final private JMenuBar menuBar;
-    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec, zamanaNaDwojkowy, zamanaNaOsemkowy, zamanaNaSzestnastkowy;
+    final private JMenuItem funkcjeTrygomometryczne, funkcjaBezwgledna, pierwiastek, mPamiec, zamanaNaDwojkowy, zamanaNaOsemkowy, zamanaNaSzestnastkowy, pomoc;
 
     //zmienna do wyświetlacza
     final private JLabel wyswietlacz;
@@ -200,6 +200,9 @@ public class Grafika extends JFrame implements ActionListener {
         zamanaNaSzestnastkowy = new JMenuItem("Zamiana z systemu dziesiętnego na szesnastkowy",'Z');
         zamanaNaSzestnastkowy.addActionListener(this);
         mOpcje.add(zamanaNaSzestnastkowy);
+        pomoc = new JMenuItem("Informacje o kalkulatorze",'I');
+        pomoc.addActionListener(this);
+        mPomoc.add(pomoc);
         setSize(290,400);
     }
 
@@ -389,7 +392,11 @@ public class Grafika extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(this, "Funkcja pamięci kalkulatora działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć przycisk 'M+' a następnie liczba zostaje zapisana w pamięci\nUwaga!!\nTrzeba pamiętać że liczba z pamięci po wykonaniu obliczeń nie zeruje się ani nie przepada więc trzeba ręcznie ją wyczyścić za pomocą przycisku 'MC'");
         }else if(zrodlo == pierwiastek){
             JOptionPane.showMessageDialog(this, "Pierwaistek działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć symbol pierwiastka a następnie znak równa się by obliczyć pierwiaste\nUwaga!!\nTrzeba pamiętać że na takim wyniku nie wolno wykonywać obliczeń należy użyć pamięci kalkulatora żeby można było wykonywać obliczenia");
-        }else if(zrodlo == zamanaNaDwojkowy){
+        }else if(zrodlo == pomoc){
+            JOptionPane.showMessageDialog(this,"Wersja 1.0.1\nKalkulator prosty obsługujący proste funkcje matematyczne oraz zamianę systemów liczbowych z dziesiętnego na dwójkowy, ósemkowy i szestnastkowy\n\tAutor programu: Prawy_126");
+        }
+        //obsługa zamiany systemów
+        if(zrodlo == zamanaNaDwojkowy){
             String liczba = JOptionPane.showInputDialog(this,"Podaj liczbę w systemie dziesiętnym:");
             int liczba1 =Integer.valueOf(liczba);
             String koniec = licz.innySystem(liczba1,2);
