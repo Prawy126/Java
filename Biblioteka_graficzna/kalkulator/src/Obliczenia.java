@@ -58,7 +58,7 @@ public class Obliczenia {
         return Math.abs(a);
     }
 
-    public double potegowanie(int a, int b)throws NegativeException{
+    /*public double potegowanie(int a, int b)throws NegativeException{
         if(b<0){
             throw new NegativeException();
         }
@@ -67,7 +67,7 @@ public class Obliczenia {
             wynik = wynik*a;
         }
         return wynik;
-    }
+    }*/
 
     public String innySystem(int a, int podstawa) {
         StringBuilder liczbaKoncowa = new StringBuilder();
@@ -97,6 +97,18 @@ public class Obliczenia {
         }
 
         return liczbaKoncowa.toString();
+    }
+
+    public double hyper(double a, String funkcja){
+        if(funkcja.equals("sinus")){
+            return Math.sinh(a);
+        }else if(funkcja.equals("cosinus")){
+            return Math.cosh(a);
+        }else if(funkcja.equals("tangens")){
+            return Math.tanh(a);
+        }else{
+            return Math.cosh(a)/Math.sinh(a);
+        }
     }
 
 }

@@ -7,7 +7,7 @@ public class Grafika extends JFrame implements ActionListener {
     //zmienne do przycisków
     final private JButton bRownaSie, b1, b2 ,b3, b4 , b5, b6, b7, b8, b9, bDodawanie, bMnozenie, bOdejmowanie, bDzielenie;
     final private JButton b0, bZnak, bPrzecinek, bCzyszczenie, bWylacz, bPierwiastek, bPamiec, bcPamiec;
-    final private JButton bSinus, bCosinus, bTangens, bCotangens, bWartoscBezwgledna;
+    final private JButton bSinus, bCosinus, bTangens, bCotangens, bWartoscBezwgledna, hsinus, hcosinus, htangens, hcotangens;
     final private ButtonGroup grupa;
     final private JRadioButton radian, stopien;
     final private JMenu mOpcje, mPomoc;
@@ -21,7 +21,7 @@ public class Grafika extends JFrame implements ActionListener {
     private boolean zmianaZnaku = false, przecinek;
 
     //zmienna wyświetlająca liczby w onknie
-    private String liczba = "", wyniks, pamiec = "0";
+    private String liczba = "", wyniks, pamiec = "0", trygonometria;
 
     //zmienna do określenia które działanie trzeba wykonać
     private char znak;
@@ -146,6 +146,26 @@ public class Grafika extends JFrame implements ActionListener {
         bCotangens.addActionListener(this);
         bCotangens.setFont(new Font("SansSerif",Font.BOLD,9));
         add(bCotangens);
+        hsinus = new JButton("SH");
+        hsinus.setBounds(x+250,y+100,szerokosc,wysokosc);
+        hsinus.addActionListener(this);
+        hsinus.setFont(new Font("SansSerif",Font.BOLD,9));
+        add(hsinus);
+        hcosinus = new JButton("CH");
+        hcosinus.setBounds(x+250, y+150,szerokosc,wysokosc);
+        hcosinus.setFont(new Font("SansSerif",Font.BOLD,9));
+        hcosinus.addActionListener(this);
+        add(hcosinus);
+        htangens = new JButton("TH");
+        htangens.setBounds(x+250, y+200,szerokosc,wysokosc);
+        htangens.setFont(new Font("SansSerif",Font.BOLD,9));
+        htangens.addActionListener(this);
+        add(htangens);
+        hcotangens = new JButton("CtH");
+        hcotangens.setBounds(x+250,y+250,szerokosc,wysokosc);
+        hcotangens.setFont(new Font("SansSerif",Font.BOLD,9));
+        hcotangens.addActionListener(this);
+        add(hcotangens);
         //przełączniki z radnianów na stopnie i odwrotnie
         grupa = new ButtonGroup();
         radian = new JRadioButton("RAD");
@@ -203,7 +223,7 @@ public class Grafika extends JFrame implements ActionListener {
         pomoc = new JMenuItem("Informacje o kalkulatorze",'I');
         pomoc.addActionListener(this);
         mPomoc.add(pomoc);
-        setSize(290,400);
+        setSize(340,400);
     }
 
     @Override
@@ -268,6 +288,30 @@ public class Grafika extends JFrame implements ActionListener {
             przecinek = false;
             zmianaZnaku = false;
             znak = 'k';
+        }else if(zrodlo == hsinus){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            trygonometria = "sinus";
+        }else if(zrodlo == hcosinus){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            trygonometria = "cosinus";
+        }else if(zrodlo == htangens){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            trygonometria = "tangens";
+        }else if(zrodlo == hcotangens){
+            liczba1 = Double.parseDouble(liczba);
+            liczba = "";
+            przecinek = false;
+            zmianaZnaku = false;
+            trygonometria = "cotangens";
         }
         if(zrodlo == bDodawanie) {
             liczba1 = Double.parseDouble(liczba);
@@ -319,6 +363,22 @@ public class Grafika extends JFrame implements ActionListener {
                     wyswietlacz.setText(wyniks);
             }else  if(znak == 'k'){
                 wynik = licz.cotangens(liczba1, stopien.isSelected());
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(trygonometria.equals("sinus")){
+                wynik = licz.hyper(liczba1,"sinus");
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(trygonometria.equals("cosinus")){
+                wynik = licz.hyper(liczba1,"cosinus");
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(trygonometria.equals("tangens")){
+                wynik = licz.hyper(liczba1,"tangens");
+                wyniks = String.valueOf(wynik);
+                wyswietlacz.setText(wyniks);
+            }else if(trygonometria.equals("cotangens")){
+                wynik = licz.hyper(liczba1,"cotangens");
                 wyniks = String.valueOf(wynik);
                 wyswietlacz.setText(wyniks);
             }
