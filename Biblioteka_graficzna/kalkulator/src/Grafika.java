@@ -453,7 +453,7 @@ public class Grafika extends JFrame implements ActionListener {
         }else if(zrodlo == pierwiastek){
             JOptionPane.showMessageDialog(this, "Pierwaistek działa w następujący sposób:\nNależy wybrać liczbę następnie nacisnąć symbol pierwiastka a następnie znak równa się by obliczyć pierwiaste\nUwaga!!\nTrzeba pamiętać że na takim wyniku nie wolno wykonywać obliczeń należy użyć pamięci kalkulatora żeby można było wykonywać obliczenia");
         }else if(zrodlo == pomoc){
-            JOptionPane.showMessageDialog(this,"Wersja 1.0.1\nKalkulator prosty obsługujący proste funkcje matematyczne oraz zamianę systemów liczbowych z dziesiętnego na dwójkowy, ósemkowy i szestnastkowy\n\tAutor programu: Prawy_126");
+            JOptionPane.showMessageDialog(this,"Wersja 1.0.2\nKalkulator prosty obsługujący proste funkcje matematyczne oraz zamianę systemów liczbowych z dziesiętnego na dwójkowy, ósemkowy i szestnastkowy\n\tAutor programu: Prawy_126");
         }
         //obsługa zamiany systemów
         if(zrodlo == zamanaNaDwojkowy){
