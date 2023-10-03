@@ -1,3 +1,5 @@
+# Wersja 1.0.2
+- Dodano funkcje trygonometryczne hiperboliczne
 # Wersja 1.0.1
 - Dodano w menu opcję wyświetlającą inforamcje o kalkulatorze
 # Wersja 1.0
