@@ -2,12 +2,16 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class Menu extends JFrame implements ActionListener {
     private JMenuBar menuBar;
     private JMenu menuPlik, menuNarzedzia, menuPomoc, menuOpcje;
     private JMenuItem mOtworz, mZapisz, mWyjscie, mNarz1, mNarz2, mOProgramy, menuOpcja1, menuOpcja2;
     private JCheckBoxMenuItem chOpcja2;
+    private JTextArea notatnik;
     public Menu(){
         setTitle("Menu");
         setSize(800,800);
@@ -56,6 +60,12 @@ public class Menu extends JFrame implements ActionListener {
         menuBar.add(menuPlik);
         menuBar.add(menuNarzedzia);
         menuBar.add(menuPomoc);
+
+        notatnik = new JTextArea();
+        JScrollPane scrollPane = new JScrollPane(notatnik);
+
+        scrollPane.setBounds(50,50,200,200);
+        add(scrollPane);
     }
 
     @Override
@@ -65,13 +75,34 @@ public class Menu extends JFrame implements ActionListener {
             JFileChooser fc = new JFileChooser();
             if(fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
                 File plik = fc.getSelectedFile();
-                JOptionPane.showMessageDialog(null,"Wybrany plik to " + plik.getAbsolutePath());
+                //JOptionPane.showMessageDialog(null,"Wybrany plik to " + plik.getAbsolutePath());
+                try {
+                    Scanner skanner = new Scanner(plik);
+                    while(skanner.hasNext()){
+                        notatnik.append(skanner.nextLine()+"\n");
+                    }
+                } catch (FileNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         }else if(zrodlo == mZapisz){
             JFileChooser fc = new JFileChooser();
             if(fc.showSaveDialog(null) == JFileChooser.APPROVE_OPTION){
                 File plik = fc.getSelectedFile();
-                JOptionPane.showMessageDialog(null,"Wybrany plik to " + plik);
+                //JOptionPane.showMessageDialog(null,"Wybrany plik to " + plik);
+
+                try {
+                    PrintWriter pw = new PrintWriter(plik);
+                    Scanner skaner = new Scanner(notatnik.getText());
+                    while(skaner.hasNext()){
+                        pw.println(skaner.nextLine()+"\n");
+                    }
+                    pw.close();
+                } catch (FileNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+
             }
         }
         else if(zrodlo == mWyjscie){
