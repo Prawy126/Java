@@ -33,7 +33,7 @@ public class Main {
 
         // Wyświetlanie wyniku
         System.out.print("Najlepsza kolejność: ");
-        for (int i = 1; i <= 6; i++) {
+        for (int i = 0; i <= 6; i++) {
             System.out.print((optymalnaKolejnosc[i]+1) + " ");
         }
         System.out.println("\nNajmniejszy czas: " + minimalnyCzas);
