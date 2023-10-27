@@ -3,8 +3,8 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
-        int proba = 100;
-        int liczba = 99;
+        int proba = 1000;
+        int liczba = Math.abs(random.nextInt() % proba);
         boolean zadanie = sprawdzenie(liczba, proba, 0);
         System.out.println("Czy liczba " + liczba + " została znaleziona? " + zadanie);
     }
@@ -21,7 +21,7 @@ public class Main {
             return sprawdzenie(liczba, proba / 2, strona);
         } else {
             System.out.println("Liczba " + pomoc + " nie jest liczbą wylosowaną " + liczba);
-            return sprawdzenie(liczba, proba / 2, pomoc+1);
+            return sprawdzenie(liczba, proba / 2, pomoc + 1);
         }
     }
 }
