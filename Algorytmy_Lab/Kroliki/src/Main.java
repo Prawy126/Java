@@ -1,4 +1,4 @@
-class Kroliki {
+class Main {
 
     static boolean przekroczonaSto, przekroczonaTysiac, przekroczonaDziesięćTysięcy, przekroczonyMilion;
 

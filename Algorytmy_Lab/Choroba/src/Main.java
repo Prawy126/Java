@@ -1,4 +1,4 @@
-class Choroba {
+class Main {
 
     final static int MAX_LICZBA_OSOB = 100000;
     static int liczbaChorych = 10;
