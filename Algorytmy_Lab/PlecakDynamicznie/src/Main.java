@@ -33,6 +33,6 @@ public class Main {
         }
 
         // Wyświetlenie maksymalnej wartości plecaka dla danej pojemności
-        System.out.println(tablicaWynikow[iloscPrzedmiotow-1][MAX]);
+        System.out.println("Maksymalna wartość plecaka to " + tablicaWynikow[iloscPrzedmiotow-1][MAX] + " przy pojemności " + MAX);
     }
 }
