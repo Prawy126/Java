@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac847f10-95b5-402f-9144-0a48a9140d9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Ekspedycja/Ekspedycja.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lody/Lody.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zgadywanie/Zgadywanie.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="ac847f10-95b5-402f-9144-0a48a9140d9b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2XolfiEQgxJt628K72PJzI7basO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +22,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/micha/Desktop/strona_internetowa/nauka/java_lab/Algorytmy_Lab"
+    "last_opened_file_path": "C:/Users/micha/Desktop/strona_internetowa/nauka/java_lab/Algorytmy_Lab/Zgadywanie"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

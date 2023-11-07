@@ -11,16 +11,16 @@ public class Main {
 
     public static boolean sprawdzenie(int liczba, int proba, int strona) {
         int pomoc = proba / 2 + strona;
-        System.out.println("Aktualnie sprawdzana liczba = " + pomoc);
+        System.out.println("Czy podana liczba to " + pomoc);
 
         if (liczba == pomoc) {
-            System.out.println("Liczba " + pomoc + " jest liczbą wylosowaną " + liczba);
+            System.out.println("Liczba " + pomoc + " jest liczbą wylosowaną wylosowaną" + liczba);
             return true;
         } else if (liczba < pomoc) {
-            System.out.println("Liczba " + pomoc + " nie jest liczbą wylosowaną " + liczba);
+            System.out.println("Liczba " + pomoc + " jest liczbą za dużą");
             return sprawdzenie(liczba, proba / 2, strona);
         } else {
-            System.out.println("Liczba " + pomoc + " nie jest liczbą wylosowaną " + liczba);
+            System.out.println("Liczba " + pomoc + " jest liczbą za małą" );
             return sprawdzenie(liczba, proba / 2, pomoc + 1);
         }
     }
