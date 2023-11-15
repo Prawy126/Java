@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8d551f61-901a-4f81-ae9a-bc87d757c788" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01 Create Login Form with Java and MySQL (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZadanieDomowePoniedzialek.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ZadanieDomowePoniedzialek.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DashboardForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/DashboardForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DashboardForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DashboardForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logowanie.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logowanie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rejestracja.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rejestracja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dashboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user2.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2YDy77ulE2DTCZUTSDlaxIx7aPn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/micha/Desktop/test"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d551f61-901a-4f81-ae9a-bc87d757c788" name="Changes" comment="" />
+      <created>1700074275290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700074275290</updated>
+    </task>
+    <servers />
+  </component>
+</project>
