@@ -52,11 +52,11 @@ Odp: W plecaku o maksymalnej wartości znajdą się przedmioty 1,2,3,4 o wartoś
 
 
 ```
-[Pełne rozwiązanie metodą programowania dynamicznego](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/PlecakDynamicznie)  
-[Pełne rozwiązanie metodą algorytmu zachłannego](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Plecak_Zachlannie)  
+- [Pełne rozwiązanie metodą programowania dynamicznego](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/PlecakDynamicznie)  
+- [Pełne rozwiązanie metodą algorytmu zachłannego](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Plecak_Zachlannie)  
 
 
-# A.6 Problem wyprodukowania lodów wszystkich smaków
+# A.5 Problem wyprodukowania lodów wszystkich smaków
 Fabryka lodów każdego dnia produkuje na tej samej maszynie lody o sześciu różnych smakach.
 Zmiana produkcji ze smaku i na smak j wymaga przestrojenia maszyny, czyli przygotowania
 (w tym umycia) do nowej produkcji, które trwa określony czas. Podana niżej tablica zawiera
@@ -142,10 +142,37 @@ informację o czasach przestrojenia maszyny.
     }
 ```
 
-Znaleźć kolejność produkcji, przy której całkowity czas przestrojenia maszyny jest minimalny. Przyjąć, że na koniec dnia maszyna ma być przygotowana do produkcji w następnym dniu.
+Znaleźć kolejność produkcji, przy której całkowity czas przestrojenia maszyny jest miniąmalny. Przyjąć, że na koniec dnia maszyna ma być przygotowana do produkcji w następnym dniu.
 
 
 ___Odp: Minimalny całkowity czas przestrojenia maszyny wynosi 63. Oto przykładowa kolejność
 produkcji lodów, dla której całkowity czas przestrojenia maszyny jest minimalny: 1,2,6,5,3,4,1.___
 
-[Całe rowiązanie metodą generowania i testowania](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Lody)
+- [Całe rowiązanie metodą generowania i testowania](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Lody)
+
+# A.6 Problem odgadywania liczb
+Jak odgadnąć liczbę pomyślaną przez rozmówcę z zakresu od 0 do 1000, zadając jak nająmniejszą liczbę pytań rozmówcy? Przy czym, pytania zadawane rozmówcy muszą być jedynie
+typu: „Czy to jest liczba 546?”, na które rozmówca może odpowiadać na jeden z następujących
+sposobów: „TAK”, „ZA MAŁA” lub „ZA DUŻA”.
+
+```java
+// Metoda rekurencyjna sprawdzająca, czy podana liczba została znaleziona w danym zakresie
+    public static boolean sprawdzenie(int liczba, int proba, int strona) {
+        int pomoc = proba / 2 + strona;
+        System.out.println("Czy podana liczba to " + pomoc);
+
+        if (liczba == pomoc) {
+            System.out.println("Liczba " + pomoc + " jest liczbą wylosowaną " + liczba);
+            return true; // Znaleziono liczbę
+        } else if (liczba < pomoc) {
+            System.out.println("Liczba " + pomoc + " jest liczbą za dużą");
+            return sprawdzenie(liczba, proba / 2, strona); // Wywołanie rekurencyjne dla mniejszej połowy zakresu
+        } else {
+            System.out.println("Liczba " + pomoc + " jest liczbą za małą" );
+            return sprawdzenie(liczba, proba / 2, pomoc + 1); // Wywołanie rekurencyjne dla większej połowy zakresu
+        }
+    }
+
+```
+[Rozwiązanie zadania metodą dziel i zwyciężaj](https://github.com/Prawy126/Java/blob/main/Algorytmy_Lab/Zgadywanie)
+
