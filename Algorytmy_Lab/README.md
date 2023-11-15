@@ -174,5 +174,5 @@ sposobów: „TAK”, „ZA MAŁA” lub „ZA DUŻA”.
     }
 
 ```
-[Rozwiązanie zadania metodą dziel i zwyciężaj](https://github.com/Prawy126/Java/blob/main/Algorytmy_Lab/Zgadywanie)
+- [Rozwiązanie zadania metodą dziel i zwyciężaj](https://github.com/Prawy126/Java/blob/main/Algorytmy_Lab/Zgadywanie)
 
