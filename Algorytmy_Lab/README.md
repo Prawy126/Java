@@ -176,3 +176,47 @@ sposobów: „TAK”, „ZA MAŁA” lub „ZA DUŻA”.
 ```
 - [Rozwiązanie zadania metodą dziel i zwyciężaj](https://github.com/Prawy126/Java/blob/main/Algorytmy_Lab/Zgadywanie)
 
+# A.20 Problem przewidywania liczebności królików
+roku 1202 Leonardo Fibonacci sformułował następujący, obecnie bardzo popularny w informatyce problem, dotyczący rozmnażania się królików. Na początku mamy parę nowonarodzonych
+królików i o każdej parze królików zakładamy, że:  
+• nowa para staje się płodna po miesiącu życia,  
+• każda płodna para rodzi jedną parę nowych królików w miesiącu,  
+• króliki nigdy nie umierają.  
+W oparciu o powyższe warunki, Fibonacci sformułował następujące pytanie: ile będzie par królików po upływie roku, które można uogólnić pytając o to: ile będzie par królików po upływie n
+miesięcy? Liczbę tę zwykle oznacza się przez Fn, jest ona nazywana liczbą Fibonacciego. Przeprowadzić symulację mająca na celu stwierdzenie: po ilu miesiącach populacja królików osiągnie:
+100, 1000, 10000, 100000 oraz 1 milion par.
+
+```java
+    static boolean przekroczonaSto, przekroczonaTysiac, przekroczonaDziesięćTysięcy, przekroczonyMilion;
+
+    // Metoda rekurencyjna zliczająca ilość krolików w ciągu Fibonacciego
+    public static int zliczajKroliki(int n) {
+        if (n == 1 || n == 2) return 1; // Warunek kończący rekurencję
+
+        int ilośćKrolików = zliczajKroliki(n - 1) + zliczajKroliki(n - 2);
+
+        // Sprawdzenie, czy ilość krolików przekroczyła określone wartości i wypisanie odpowiednich komunikatów
+        if (ilośćKrolików > 100 && !przekroczonaSto) {
+            System.out.println("Przekroczono sto: " + n + " (Ilość krolików: " + ilośćKrolików + ")");
+            przekroczonaSto = true;
+        }
+
+        if (ilośćKrolików > 1000 && !przekroczonaTysiac) {
+            System.out.println("Przekroczono tysiąc: " + n + " (Ilość krolików: " + ilośćKrolików + ")");
+            przekroczonaTysiac = true;
+        }
+
+        if (ilośćKrolików > 10000 && !przekroczonaDziesięćTysięcy) {
+            System.out.println("Przekroczono dziesięć tysięcy: " + n + " (Ilość krolików: " + ilośćKrolików + ")");
+            przekroczonaDziesięćTysięcy = true;
+        }
+
+        if (ilośćKrolików > 1000000 && !przekroczonyMilion) {
+            System.out.println("Przekroczono milion: " + n + " (Ilość krolików: " + ilośćKrolików + ")");
+            przekroczonyMilion = true;
+        }
+
+        return ilośćKrolików; // Zwracanie ilości krolików dla danego n
+    }
+```
+- [Rowziązanie zadania metodą dziel i zwyciężaj](https://github.com/Prawy126/Java/blob/main/Algorytmy_Lab/Kroliki)
