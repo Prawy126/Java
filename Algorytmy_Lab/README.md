@@ -52,7 +52,9 @@ Odp: W plecaku o maksymalnej wartości znajdą się przedmioty 1,2,3,4 o wartoś
 
 
 ```
-[Pełne rozwiązanie](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/PlecakDynamicznie)
+[Pełne rozwiązanie metodą programowania dynamicznego](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/PlecakDynamicznie)  
+[Pełne rozwiązanie metodą algorytmu zachłannego](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Plecak_Zachlannie)  
+
 
 # A.6 Problem wyprodukowania lodów wszystkich smaków
 Fabryka lodów każdego dnia produkuje na tej samej maszynie lody o sześciu różnych smakach.
@@ -146,4 +148,4 @@ Znaleźć kolejność produkcji, przy której całkowity czas przestrojenia masz
 ___Odp: Minimalny całkowity czas przestrojenia maszyny wynosi 63. Oto przykładowa kolejność
 produkcji lodów, dla której całkowity czas przestrojenia maszyny jest minimalny: 1,2,6,5,3,4,1.___
 
-[Całe rowiązanie](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Lody)
+[Całe rowiązanie metodą generowania i testowania](https://github.com/Prawy126/Java/tree/main/Algorytmy_Lab/Lody)
