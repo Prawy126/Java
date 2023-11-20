@@ -7,15 +7,15 @@ public class Pole_Figury {
         Random rand = new Random();
         int pole = 0;
 
-        for (int i = 0; i < 1000; i++) {
-            double x = (double) rand.nextInt(1800 + 1) / 1000 + 1.2;
-            double y = (double) rand.nextInt(1800 + 1) / 1000 + 1.1;
+        for(int i=0; i<100; i++){
+            double x = (double) rand.nextInt(100+1)/100;
+            double y = (double) rand.nextInt(100+1)/100;
 
-            if (y <= x * x - x) {
+            if(y<=Math.pow(x,2)){
                 pole++;
             }
         }
 
-        System.out.println("Pole figury: " + (float) pole / 1000);
+        System.out.println("Pole figury: " + (float) pole / 100);
     }
 }
