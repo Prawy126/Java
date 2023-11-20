@@ -2,13 +2,13 @@ package Algorytm_Zachlanny;
 
 public class A28_Wydawanie_Reszty {
     public static void main(String[] args) {
-        final int[] nominaly = {500, 200, 100, 50, 20, 10, 5, 2, 1};
-        int[] dostepneMonety = {1, 2, 0, 2, 1, 4, 2, 1, 1};
+        final int[] nominaly = {1,2,5,10,20,50,100,200,500};
+        int[] dostepneMonety = {30,7,4,1,5,3,0,1,7};
         int[] wydaneMonety = new int[9];
-        final double RESZTA = 9.99;
+        final double RESZTA = 7.53;
         int resztaWgroszach = (int) (RESZTA * 100);
-
-        for (int i = 0; i < nominaly.length; i++) {
+        //tutaj należy odwrócić pętlę
+        for (int i = dostepneMonety.length-1; i >= 0; i--) {
             int nominal = nominaly[i];
             int iloscDostepnych = dostepneMonety[i];
 
