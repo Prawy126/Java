@@ -7,7 +7,7 @@ class A20_Populacja_Krolikow {
             if (n == 1 || n == 2) return 1;
 
             int ilośćKrolików = zliczajKroliki(n - 1) + zliczajKroliki(n - 2);
-
+            //jeśli w zadaniu trzeba zliczać czas po ilu populacja przekroczy i wypisać na ekran
             if (ilośćKrolików > 100 && !przekroczonaSto) {
                 System.out.println("Przekroczono sto: " + n + " (Ilość krolików: " + ilośćKrolików + ")");
                 przekroczonaSto = true;
