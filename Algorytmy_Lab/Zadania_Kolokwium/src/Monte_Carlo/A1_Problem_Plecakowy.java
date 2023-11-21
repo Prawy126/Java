@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class A1_Problem_Plecakowy {
 
-    static final int liczbaPrzedmiotow = 6;                // liczba przedmiotow
-    static final int maksymalnaObjetoscPlecaka = 10;           // objetosc plecaka
-    final static int[] objetosciPrzedmiotow = {2, 6, 3, 3, 1, 2};  // objetości przedmiotów
-    final static int[] wartosciPrzedmiotow = {4, 6, 5, 10, 2, 7}; // wartości przedmiotów
+    static final int liczbaPrzedmiotow = 6;
+    static final int maksymalnaObjetoscPlecaka = 10;
+    final static int[] objetosciPrzedmiotow = {2, 6, 3, 3, 1, 2};
+    final static int[] wartosciPrzedmiotow = {4, 6, 5, 10, 2, 7};
 
     public static void main(String[] args)
     {
@@ -15,17 +15,17 @@ public class A1_Problem_Plecakowy {
         int optymalnaObjetosc = -1;
         int optymalnaWartosc = 0;
         Random los = new Random();
-        for (int i = 0; i < 10; i++) // Bedzie 10 prob losowania
+        for (int i = 0; i < 10; i++)
         {
-            int[] ustawienie = new int[liczbaPrzedmiotow]; // Inicjujemy wstepne ustawienie przedmiotow
+            int[] ustawienie = new int[liczbaPrzedmiotow];
             for (int j = 0; j < liczbaPrzedmiotow; j++) ustawienie[j] = j;
 
-            for (int j = 0; j < liczbaPrzedmiotow; j++) // Tasowanie przedmiotow
+            for (int j = 0; j < liczbaPrzedmiotow; j++)
             {
                 int indeksLosowy = los.nextInt(liczbaPrzedmiotow);
                 if (indeksLosowy != j)
                 {
-                    int pom = ustawienie[j]; // Zamiana elementow
+                    int pom = ustawienie[j];
                     ustawienie[j] = ustawienie[indeksLosowy];
                     ustawienie[indeksLosowy] = pom;
                 }
@@ -34,7 +34,6 @@ public class A1_Problem_Plecakowy {
             int sumaObjetosci = 0;
             int sumaWartosci = 0;
             int j = 0;
-            // Bierzemy przedmioty do plecaka od poczatku tablicy dopoki sie mieszcza
             while ((j < liczbaPrzedmiotow) && (sumaObjetosci + objetosciPrzedmiotow[ustawienie[j]] <= maksymalnaObjetoscPlecaka))
             {
                 sumaObjetosci = sumaObjetosci + objetosciPrzedmiotow[ustawienie[j]];
