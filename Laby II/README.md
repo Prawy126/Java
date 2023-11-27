@@ -5,5 +5,5 @@
 - [Laboratorium numer 2](https://github.com/Prawy126/Java/tree/main/Laby%20II/lab2)
 
 # C#
--[Folder z laboratoriami z C#](https:/github.com/Prawy126/Cs)
+- [Folder z laboratoriami z C#](https://github.com/Prawy126/Cs)
   
