@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d551f61-901a-4f81-ae9a-bc87d757c788" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ZadanieDomowePoniedzialek.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ZadanieDomowePoniedzialek.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ZadanieDomowePoniedzialek/RegistrationForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ZadanieDomowePoniedzialek/RegistrationForm.class" afterDir="false" />
+    <list default="true" id="e0a3e36d-14aa-45c8-aecc-42c658e378ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Laby II/ZadanieDomowePoniedzialek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laby II/ZadanieDomowePoniedzialek/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laby II/ZadanieDomowePoniedzialek/ZadanieDomowePoniedzialek.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laby II/ZadanieDomowePoniedzialek/ZadanieDomowePoniedzialek.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Laby II/ZadanieDomowePoniedzialek/out/production/ZadanieDomowePoniedzialek/RegistrationForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Laby II/ZadanieDomowePoniedzialek/out/production/ZadanieDomowePoniedzialek/RegistrationForm.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2YDy77ulE2DTCZUTSDlaxIx7aPn" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2YjMEgkmZUC2ZFtW5XSvAflhVIm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/micha/Desktop/strona_internetowa/nauka/java_lab/Laby II/ZadanieDomowePoniedzialek/mysql-connector-j-8.2.0.jar",
+    "last_opened_file_path": "C:/Users/micha/Desktop/strona_internetowa/Overwatch",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -39,11 +46,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8d551f61-901a-4f81-ae9a-bc87d757c788" name="Changes" comment="" />
-      <created>1700074275290</created>
+      <changelist id="e0a3e36d-14aa-45c8-aecc-42c658e378ae" name="Changes" comment="" />
+      <created>1701034426993</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700074275290</updated>
+      <updated>1701034426993</updated>
     </task>
     <servers />
   </component>
