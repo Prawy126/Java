@@ -1,5 +1,11 @@
 package struktury_A.Z2;
 
+/*
+ Implementacja uporządkowanej tablicy dynamicznej (dst – tablica liczb całkowitych, db – tablica wartości opakowanych np.
+klasami Integer, Double, Float lub obiektów typu String, bdb – tablica złożonych obiektów zdefiniowanych przez użytkownika,
+np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.)
+ */
+
 //Implementacja uporzadkowanej tablicy dynamicznej liczb calkowitych
 
 
