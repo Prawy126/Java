@@ -59,7 +59,7 @@ public class LinkedListList
     public int size()  // rozmiar listy
     {
         return oList.size();
-        
+
     }
 
     public void print()
