@@ -2,7 +2,7 @@ package struktury_A.Z5;
 
 /*
 Implementacja drzewa BST liczb całkowitych (dst – jedna funkcjonalność, db – dwie funkcjonalności, bdb – trzy
-funkcjonalności) 
+funkcjonalności)
  */
 
 //Klasa definujaca drzewo poszukiwan binarnych
