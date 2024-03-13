@@ -31,7 +31,9 @@ bilioteki Java swing(GUI) oraz podsaw języka Java:
 [Prosty kalkulator graficzny](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/kalkulator)  
 Wyszukiwarka informacji na temat pokemonów. Projekt ma na celu połączyć wykorzystanie biblioteki graficznej w Javie oraz biblioteki JSoup która służy
 do przetwarzania i analizowania dokumentów HTML i XML:
+
 [Wyszukiwarka informacji o pokemonach](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/Pokemon) 
+
 [Kolejka FIFO sklep](htttps://github.com/Prawy126/KOLEJKA-FIFO)
     - [link](prawy126.github.io/Kolejka-FIFO/)
 
