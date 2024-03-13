@@ -20,7 +20,6 @@ To repozytorium powstało by pokazać jak przebiega moja nauka Javy jednego z to
 [Drugie kolokwium](https://github.com/Prawy126/Java/tree/main/Kolokiwum/Kolokwium%202)  
 
 ## Nauka biblioteki graficznej
-Aktualnie uczę się biblioteki graficznej w Javie (więc ten folder się pewnie zmieni w niedługim okresie czasu, pojawiać będą się tu materiały z których uczę się jak korzystać z metod i obiektów biblioteki oraz różnego rodzaju projekty)<br>
 #### Materiały z lekcji:
 [Pierwsza lekcja](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/MojeOkienko)  
 [Druga lekcja](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/Lekcja2)  
@@ -32,7 +31,9 @@ bilioteki Java swing(GUI) oraz podsaw języka Java:
 [Prosty kalkulator graficzny](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/kalkulator)  
 Wyszukiwarka informacji na temat pokemonów. Projekt ma na celu połączyć wykorzystanie biblioteki graficznej w Javie oraz biblioteki JSoup która służy
 do przetwarzania i analizowania dokumentów HTML i XML:
-[Wyszukiwarka informacji o pokemonach](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/Pokemon)  
+[Wyszukiwarka informacji o pokemonach](https://github.com/Prawy126/Java/tree/main/Biblioteka_graficzna/Pokemon) 
+[Kolejka FIFO sklep](htttps://github.com/Prawy126/KOLEJKA-FIFO)
+    - [link](prawy126.github.io/Kolejka-FIFO/)
 
 #### Zadania domowe na wykład Algorytmy i struktury danych wykonane w języku Java:
 [Algorytmy i struktury danych](https://github.com/Prawy126/Java/tree/main/Algorytmy)  
